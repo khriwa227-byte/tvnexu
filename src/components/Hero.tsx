@@ -82,11 +82,11 @@ export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
             </div>
 
             {/* Right Column: 4-image collage — 1 big + 3 below */}
-            <div className="lg:col-span-5 hidden sm:block">
+            <div className="lg:col-span-5">
               <div className="flex flex-col gap-2 rounded-3xl overflow-hidden shadow-2xl shadow-slate-200">
                 {/* Big top image */}
                 <div className="relative overflow-hidden rounded-t-3xl">
-                  <img src="/images/hero_collage/Formula_1_featured.jpg" alt="Formula 1" className="w-full h-52 sm:h-64 object-cover hover:scale-105 transition-transform duration-500" />
+                  <img src="/images/hero_collage/Formula_1_featured.jpg" alt="Formula 1" className="w-full h-40 sm:h-64 object-cover hover:scale-105 transition-transform duration-500" />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                   <div className="absolute bottom-3 left-4">
                     <span className="block text-[10px] font-bold uppercase tracking-widest text-red-400">🔴 Live</span>
@@ -96,21 +96,21 @@ export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
                 {/* 3 small images below */}
                 <div className="grid grid-cols-3 gap-2">
                   <div className="relative overflow-hidden rounded-bl-3xl">
-                    <img src="/images/hero_collage/Champions_League.jpg" alt="Champions League" className="w-full h-28 sm:h-36 object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="/images/hero_collage/Champions_League.jpg" alt="Champions League" className="w-full h-20 sm:h-36 object-cover hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                     <div className="absolute bottom-2 left-2 right-2">
                       <span className="block text-white font-bold text-[11px] sm:text-xs leading-tight">UEFA Champions League</span>
                     </div>
                   </div>
                   <div className="relative overflow-hidden">
-                    <img src="/images/hero_collage/FIFA_World_Cup.jpg" alt="FIFA World Cup" className="w-full h-28 sm:h-36 object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="/images/hero_collage/FIFA_World_Cup.jpg" alt="FIFA World Cup" className="w-full h-20 sm:h-36 object-cover hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                     <div className="absolute bottom-2 left-2 right-2">
                       <span className="block text-white font-bold text-[11px] sm:text-xs leading-tight">FIFA World Cup 2026</span>
                     </div>
                   </div>
                   <div className="relative overflow-hidden rounded-br-3xl">
-                    <img src="/images/hero_collage/Eredivisie.jpg" alt="Eredivisie" className="w-full h-28 sm:h-36 object-cover hover:scale-105 transition-transform duration-500" />
+                    <img src="/images/hero_collage/Eredivisie.jpg" alt="Eredivisie" className="w-full h-20 sm:h-36 object-cover hover:scale-105 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/10 to-transparent" />
                     <div className="absolute bottom-2 left-2 right-2">
                       <span className="block text-white font-bold text-[11px] sm:text-xs leading-tight">Eredivisie</span>

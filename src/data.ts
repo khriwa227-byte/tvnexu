@@ -26,32 +26,6 @@ export const BENEFITS: Benefit[] = [
 
 export const PRICING_PLANS: PricingPlan[] = [
   {
-    id: 'basis',
-    name: 'BASIS',
-    price: '69.99',
-    period: 'Jaar',
-    subtitle: 'Jaarabonnement',
-    badgeOffer: '+ Gratis IBO Pro-speler!',
-    features: [
-      'BASIC SERVER',
-      'Alle Premium Kanalen',
-      'ESPN Nederland voor Eredivisie ⚽',
-      'Ziggo Sport en Viaplay voor Formule 1',
-      'Eleven Sports voor Belgian Pro League ⚽',
-      'Amazon Prime, Viaplay, NPO Start Plus, Discovery+, HBO Max, Netflix, Apple+, Disney+',
-      'Onbeperkt Films & Series',
-      'SD / HD / FULL HD',
-      'Snelle & Stabiele Servers',
-      'Regelmatig Bijgewerkte Content',
-      '24/7 Klantenservice',
-      '15 dagen Garantie',
-      'TV Replay & Gids',
-      'Compatibel Met Alle Apparaten'
-    ],
-    buttonText: 'Bestellen',
-    buttonVariant: 'secondary'
-  },
-  {
     id: 'premium',
     name: 'PREMIUM',
     price: '78',
@@ -107,6 +81,32 @@ export const PRICING_PLANS: PricingPlan[] = [
     ],
     buttonText: 'Bestellen',
     buttonVariant: 'accent'
+  },
+  {
+    id: 'basis',
+    name: 'BASIS',
+    price: '69.99',
+    period: 'Jaar',
+    subtitle: 'Jaarabonnement',
+    badgeOffer: '+ Gratis IBO Pro-speler!',
+    features: [
+      'BASIC SERVER',
+      'Alle Premium Kanalen',
+      'ESPN Nederland voor Eredivisie ⚽',
+      'Ziggo Sport en Viaplay voor Formule 1',
+      'Eleven Sports voor Belgian Pro League ⚽',
+      'Amazon Prime, Viaplay, NPO Start Plus, Discovery+, HBO Max, Netflix, Apple+, Disney+',
+      'Onbeperkt Films & Series',
+      'SD / HD / FULL HD',
+      'Snelle & Stabiele Servers',
+      'Regelmatig Bijgewerkte Content',
+      '24/7 Klantenservice',
+      '15 dagen Garantie',
+      'TV Replay & Gids',
+      'Compatibel Met Alle Apparaten'
+    ],
+    buttonText: 'Bestellen',
+    buttonVariant: 'secondary'
   }
 ];
 
