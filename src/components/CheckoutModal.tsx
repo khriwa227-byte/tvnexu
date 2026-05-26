@@ -52,10 +52,10 @@ export default function CheckoutModal({ isOpen, onClose, plan, initialAdultChann
         setOrderCompleted(true);
       };
       if (webhookUrl) {
-        fetch(webhookUrl, {
-          method: 'POST',
+        const params = new URLSearchParams(payload as Record<string, string>);
+        fetch(`${webhookUrl}?${params.toString()}`, {
+          method: 'GET',
           mode: 'no-cors',
-          body: JSON.stringify(payload),
         }).finally(finish);
       } else {
         setTimeout(finish, 1500);
