@@ -92,7 +92,7 @@ export default function StreamingReleases() {
             {DUPLICATED_POSTERS.map((poster, idx) => (
               <div
                 key={`${poster.id}-${idx}`}
-                className="min-w-[200px] sm:min-w-[240px] md:min-w-[260px] h-[360px] sm:h-[400px] rounded-3xl overflow-hidden relative group/item shadow-2xl shadow-slate-300/35 flex-shrink-0 bg-slate-900"
+                className="min-w-[150px] sm:min-w-[220px] md:min-w-[260px] h-[260px] sm:h-[360px] md:h-[400px] rounded-2xl sm:rounded-3xl overflow-hidden relative group/item shadow-2xl shadow-slate-300/35 flex-shrink-0 bg-slate-900"
               >
                 <img
                   src={poster.imageUrl}
