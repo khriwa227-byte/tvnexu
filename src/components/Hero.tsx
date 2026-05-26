@@ -15,7 +15,7 @@ export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10">
         <div className="bg-white rounded-[32px] sm:rounded-[40px] shadow-2xl shadow-slate-200 p-6 sm:p-10 lg:p-16">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-10 lg:gap-8 items-center">
             
             {/* Left Column: Headline and Badges */}
             <div className="lg:col-span-7 space-y-6 sm:space-y-8">
@@ -48,10 +48,10 @@ export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
 
               {/* Central Copy and Titles */}
               <div className="space-y-4">
-                <h1 className="text-4xl md:text-5xl font-bold leading-[1.12] text-slate-950 tracking-tight">
+                <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-[1.12] text-slate-950 tracking-tight">
                   Kies de #1 IPTV provider in Nederland en België! 🇳🇱 🇧🇪
                 </h1>
-                <p id="hero-gradient-text" className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 bg-clip-text text-transparent leading-snug">
+                <p id="hero-gradient-text" className="text-xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-blue-600 via-cyan-500 to-emerald-500 bg-clip-text text-transparent leading-snug">
                   Kwaliteit en Extra's voor Jouw Entertainment!
                 </p>
                 <p className="text-sm sm:text-base text-slate-650 leading-relaxed max-w-2xl">
@@ -82,11 +82,11 @@ export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
             </div>
 
             {/* Right Column: Display / TV Dashboard representation */}
-            <div className="lg:col-span-5 space-y-4">
+            <div className="lg:col-span-5 space-y-4 hidden sm:block">
               <div className="bg-slate-900 rounded-3xl p-3 shadow-2xl relative overflow-hidden border border-slate-850">
                 
                 {/* Main banner block formula 1 */}
-                <div className="relative h-48 sm:h-56 bg-slate-800 rounded-2xl overflow-hidden group">
+                <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden group">
                   <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
                   
                   {/* Overlay text */}
