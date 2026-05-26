@@ -72,7 +72,7 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
                       MEEST POPULAIR
                     </span>
                     <span className="px-3.5 py-1 bg-[#8b5cf6] text-white font-extrabold text-[9px] uppercase tracking-wider rounded-full shadow-md shadow-indigo-600/15">
-                      18 MAANDEN
+                      15 MAANDEN
                     </span>
                   </div>
                 )}
