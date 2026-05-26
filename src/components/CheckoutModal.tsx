@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { X, Check, CreditCard, Shield, Send, Sparkles, HelpCircle, AlertCircle } from 'lucide-react';
+
+declare function gtag(...args: unknown[]): void;
 import { PricingPlan } from '../types';
 
 interface CheckoutModalProps {
@@ -45,7 +47,8 @@ export default function CheckoutModal({ isOpen, onClose, plan, initialAdultChann
   };
 
   const handleWhatsAppRedirect = () => {
-    const text = `Hallo TvLux! Ik wil graag de ${plan.name} bestellen voor €${plan.price}/jaar. 
+    gtag('event', 'conversion', { send_to: 'AW-18167605266/SJxRCIblwbMcEJLQ_tZD', value: parseFloat(plan.price), currency: 'EUR' });
+    const text = `Hallo TvLux! Ik wil graag de ${plan.name} bestellen voor €${plan.price}/jaar.
 Apparaat: ${deviceType}
 E-mail: ${email || "Niet opgegeven"}
 Betaalmethode: ${paymentMethod.toUpperCase()}`;
@@ -55,23 +58,23 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
   return (
     <AnimatePresence>
       {isOpen && (
-        <div id="checkout-modal-overlay" className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm overflow-y-auto">
+        <div id="checkout-modal-overlay" className="fixed inset-0 z-50 flex items-start sm:items-center justify-center p-2 sm:p-4 bg-black/60 backdrop-blur-sm overflow-y-auto">
           <motion.div
             id="checkout-modal-container"
             initial={{ opacity: 0, scale: 0.95, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', duration: 0.5 }}
-            className="relative w-full max-w-xl bg-white rounded-3xl shadow-2xl overflow-hidden border border-gray-100 my-8"
+            className="relative w-full max-w-xl bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-gray-100 my-2 sm:my-8"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-6 bg-slate-50 border-b border-gray-100">
+            <div className="flex items-center justify-between p-4 sm:p-6 bg-slate-50 border-b border-gray-100">
               <div className="flex items-center gap-3">
                 <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 id="checkout-title" className="text-xl font-semibold text-gray-950">Abonnement Activeren</h3>
+                  <h3 id="checkout-title" className="text-base sm:text-xl font-semibold text-gray-950">Abonnement Activeren</h3>
                   <p className="text-xs text-gray-500 font-sans">TvLux Premium IPTV Service 🇳🇱 🇧🇪</p>
                 </div>
               </div>
@@ -106,7 +109,7 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
             )}
 
             {/* Body */}
-            <div className="p-6">
+            <div className="p-4 sm:p-6">
               {orderCompleted ? (
                 <motion.div
                   initial={{ opacity: 0, scale: 0.9 }}
