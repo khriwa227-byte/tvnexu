@@ -54,6 +54,7 @@ export default function CheckoutModal({ isOpen, onClose, plan, initialAdultChann
       if (webhookUrl) {
         fetch(webhookUrl, {
           method: 'POST',
+          mode: 'no-cors',
           body: JSON.stringify(payload),
         }).finally(finish);
       } else {
