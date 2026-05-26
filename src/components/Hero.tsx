@@ -81,56 +81,21 @@ export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
 
             </div>
 
-            {/* Right Column: Display / TV Dashboard representation */}
-            <div className="lg:col-span-5 space-y-4 hidden sm:block">
-              <div className="bg-slate-900 rounded-3xl p-3 shadow-2xl relative overflow-hidden border border-slate-850">
-                
-                {/* Main banner block formula 1 */}
-                <div className="relative h-48 sm:h-56 rounded-2xl overflow-hidden group">
-                  <div className="absolute inset-0 bg-gradient-to-t from-slate-950/80 via-transparent to-transparent" />
-                  
-                  {/* Overlay text */}
-                  <div className="absolute bottom-4 left-4">
-                    <span className="px-2 py-0.5 text-[9px] font-black tracking-widest text-[#25D366] bg-[#25D366]/20 border border-[#25D366]/40 rounded-sm uppercase">FORMULE 1 LIVE</span>
-                    <h3 className="text-white text-lg font-semibold mt-1">Grand Prix Melbourne</h3>
-                  </div>
+            {/* Right Column: 4-image collage */}
+            <div className="lg:col-span-5 hidden sm:block">
+              <div className="grid grid-cols-2 gap-2 rounded-3xl overflow-hidden shadow-2xl shadow-slate-200">
+                <div className="overflow-hidden rounded-tl-3xl">
+                  <img src="/images/hero_collage/Formula_1_featured.jpg" alt="Formula 1" className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
-
-                {/* Grid row for mini channels */}
-                <div className="grid grid-cols-3 gap-2 mt-2">
-                  
-                  {/* Card 1: Champions league */}
-                  <div className="bg-slate-950 rounded-xl p-2 text-center flex flex-col justify-between h-24 relative overflow-hidden border border-slate-800">
-                    <div className="absolute inset-x-0 top-0 h-1 bg-blue-600" />
-                    <p className="text-[9px] font-bold text-slate-400 truncate uppercase mt-1">UEFA</p>
-                    <div className="mx-auto w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center my-0.5 text-[8px] font-bold text-white">🏆</div>
-                    <p className="text-[10px] font-bold text-white truncate px-0.5">CL League</p>
-                  </div>
-
-                  {/* Card 2: World Cup */}
-                  <div className="bg-slate-950 rounded-xl p-2 text-center flex flex-col justify-between h-24 relative overflow-hidden border border-slate-800">
-                    <div className="absolute inset-x-0 top-0 h-1 bg-amber-500" />
-                    <p className="text-[9px] font-bold text-slate-400 truncate uppercase mt-1">FIFA</p>
-                    <div className="mx-auto w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center my-0.5 text-[9px]">⚽</div>
-                    <p className="text-[10px] font-bold text-white truncate px-0.5">WC Cup 2026</p>
-                  </div>
-
-                  {/* Card 3: Eredivisie */}
-                  <div className="bg-slate-950 rounded-xl p-2 text-center flex flex-col justify-between h-24 relative overflow-hidden border border-slate-800">
-                    <div className="absolute inset-x-0 top-0 h-1 bg-emerald-500" />
-                    <p className="text-[9px] font-bold text-[#e1e7ec] truncate uppercase mt-1">NL</p>
-                    <div className="mx-auto w-6 h-6 rounded-full bg-slate-900 flex items-center justify-center my-0.5 text-[9px]">🇳🇱</div>
-                    <p className="text-[10px] font-bold text-white truncate px-0.5">Eredivisie</p>
-                  </div>
-
+                <div className="overflow-hidden rounded-tr-3xl">
+                  <img src="/images/hero_collage/Champions_League.jpg" alt="Champions League" className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
-
-                {/* Footer Live signal feedback code */}
-                <div className="flex items-center justify-center gap-1.5 mt-3 pt-2 border-t border-slate-850">
-                  <span className="w-2 h-2 rounded-full bg-red-650 animate-ping inline-block" />
-                  <span className="text-[11px] font-black text-slate-400 tracking-wider">LIVE SPORT EVENEMENTEN IN 4K</span>
+                <div className="overflow-hidden rounded-bl-3xl">
+                  <img src="/images/hero_collage/FIFA_World_Cup.jpg" alt="FIFA World Cup" className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
-
+                <div className="overflow-hidden rounded-br-3xl">
+                  <img src="/images/hero_collage/Eredivisie.jpg" alt="Eredivisie" className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                </div>
               </div>
             </div>
 
