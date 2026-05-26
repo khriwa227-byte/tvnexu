@@ -81,20 +81,24 @@ export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
 
             </div>
 
-            {/* Right Column: 4-image collage */}
+            {/* Right Column: 4-image collage — 1 big + 3 below */}
             <div className="lg:col-span-5 hidden sm:block">
-              <div className="grid grid-cols-2 gap-2 rounded-3xl overflow-hidden shadow-2xl shadow-slate-200">
-                <div className="overflow-hidden rounded-tl-3xl">
-                  <img src="/images/hero_collage/Formula_1_featured.jpg" alt="Formula 1" className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500" />
+              <div className="flex flex-col gap-2 rounded-3xl overflow-hidden shadow-2xl shadow-slate-200">
+                {/* Big top image */}
+                <div className="overflow-hidden rounded-t-3xl">
+                  <img src="/images/hero_collage/Formula_1_featured.jpg" alt="Formula 1" className="w-full h-52 sm:h-64 object-cover hover:scale-105 transition-transform duration-500" />
                 </div>
-                <div className="overflow-hidden rounded-tr-3xl">
-                  <img src="/images/hero_collage/Champions_League.jpg" alt="Champions League" className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="overflow-hidden rounded-bl-3xl">
-                  <img src="/images/hero_collage/FIFA_World_Cup.jpg" alt="FIFA World Cup" className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500" />
-                </div>
-                <div className="overflow-hidden rounded-br-3xl">
-                  <img src="/images/hero_collage/Eredivisie.jpg" alt="Eredivisie" className="w-full h-48 sm:h-56 object-cover hover:scale-105 transition-transform duration-500" />
+                {/* 3 small images below */}
+                <div className="grid grid-cols-3 gap-2">
+                  <div className="overflow-hidden rounded-bl-3xl">
+                    <img src="/images/hero_collage/Champions_League.jpg" alt="Champions League" className="w-full h-28 sm:h-36 object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="overflow-hidden">
+                    <img src="/images/hero_collage/FIFA_World_Cup.jpg" alt="FIFA World Cup" className="w-full h-28 sm:h-36 object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
+                  <div className="overflow-hidden rounded-br-3xl">
+                    <img src="/images/hero_collage/Eredivisie.jpg" alt="Eredivisie" className="w-full h-28 sm:h-36 object-cover hover:scale-105 transition-transform duration-500" />
+                  </div>
                 </div>
               </div>
             </div>
