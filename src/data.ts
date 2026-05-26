@@ -226,178 +226,33 @@ export const TESTIMONIALS: Testimonial[] = [
 ];
 
 export const MOVIE_POSTERS: MoviePoster[] = [
-  {
-    id: 'poster-1',
-    title: 'Inception',
-    imageUrl: 'https://i.pinimg.com/236x/c3/bc/d9/c3bcd9fee8333507c87b46c10f9914f3.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-2',
-    title: 'No Time to Die',
-    imageUrl: 'https://i.pinimg.com/474x/6b/9c/b4/6b9cb41b100cfca5bfda6bbdc67845c6.jpg',
-    badge: 'Prime Video'
-  },
-  {
-    id: 'poster-3',
-    title: 'Stranger Things',
-    imageUrl: 'https://i.pinimg.com/474x/bd/8b/f0/bd8bf0581c0999158162a9242bddbd34.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-4',
-    title: 'Basketball',
-    imageUrl: 'https://i.pinimg.com/236x/72/57/d1/7257d1b9720d3a051477d5df5365fbda.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-5',
-    title: 'Motorsport',
-    imageUrl: 'https://i.pinimg.com/474x/16/7a/02/167a02724d346a2fd58a7dcf9f9483eb.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-6',
-    title: 'Keizersvrouwen',
-    imageUrl: 'https://i.pinimg.com/474x/1e/cf/3b/1ecf3bdc537aca6671651ee4668300d2.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-7',
-    title: 'Fight Club',
-    imageUrl: 'https://i.pinimg.com/236x/3e/6f/79/3e6f7932a6538de45cc019c83632867d.jpg',
-    badge: 'Prime Video'
-  },
-  {
-    id: 'poster-8',
-    title: 'Champions League',
-    imageUrl: 'https://i.pinimg.com/474x/09/41/16/094116af77c32bc66bbee0e2457268d3.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-9',
-    title: 'Pulp Fiction',
-    imageUrl: 'https://i.pinimg.com/236x/e3/58/3c/e3583c028c1bd58273a79ccae0b0d757.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-10',
-    title: 'The Godfather',
-    imageUrl: 'https://i.pinimg.com/474x/ad/38/5c/ad385c324357fb03e0df28625eae89fd.jpg',
-    badge: 'Prime Video'
-  },
-  {
-    id: 'poster-11',
-    title: 'Eredivisie',
-    imageUrl: 'https://i.pinimg.com/236x/4f/42/c0/4f42c00fcdca62e0b4dc9ede498ceb90.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-12',
-    title: 'Serie A',
-    imageUrl: 'https://i.pinimg.com/236x/93/65/3f/93653fcd83d43032f40199e5fb4f7344.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-13',
-    title: 'Squid Game',
-    imageUrl: 'https://i.pinimg.com/736x/04/40/86/044086c751f99ff4ed1b635dcbf3fb07.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-14',
-    title: 'The Dark Knight',
-    imageUrl: 'https://i.pinimg.com/236x/e0/0c/41/e00c415834bd6f3361badf5248e70506.jpg',
-    badge: 'HBO MAX'
-  },
-  {
-    id: 'poster-15',
-    title: 'Les Schtroumpfs',
-    imageUrl: 'https://i.pinimg.com/474x/82/86/1c/82861c0000f83d4c2b79ebd69a5ad83e.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-16',
-    title: 'Narcos',
-    imageUrl: 'https://i.pinimg.com/474x/71/ff/3c/71ff3c2f9639bbe05eff5f83dfd90bf9.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-17',
-    title: 'CAF Champions League',
-    imageUrl: 'https://i.pinimg.com/474x/06/6f/85/066f85ade555a54859412e87fa7a4f32.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-18',
-    title: 'The Golden Hour',
-    imageUrl: 'https://i.pinimg.com/474x/ac/a5/40/aca540f41518da2df8b7c88524423bfd.jpg',
-    badge: 'Prime Video'
-  },
-  {
-    id: 'poster-19',
-    title: 'Athletics',
-    imageUrl: 'https://i.pinimg.com/236x/0c/44/37/0c4437a6c980f6bc7fa18381756ff0e5.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-20',
-    title: 'Bundesliga',
-    imageUrl: 'https://i.pinimg.com/474x/68/4b/2d/684b2dd33e66f8ac90b9195cbfb4510d.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-21',
-    title: 'Champions Hockey League',
-    imageUrl: 'https://i.pinimg.com/236x/f3/3d/eb/f33deb0ce2942d4abf051ca455860d41.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-22',
-    title: 'Mia and Me',
-    imageUrl: 'https://i.pinimg.com/474x/90/19/79/9019797b475dd486ac948c3de264d743.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-23',
-    title: 'The Matrix',
-    imageUrl: 'https://i.pinimg.com/236x/fc/4b/1c/fc4b1cb96410920d1dd611029a29d884.jpg',
-    badge: 'HBO MAX'
-  },
-  {
-    id: 'poster-24',
-    title: 'Amstel Gold Race',
-    imageUrl: 'https://i.pinimg.com/236x/6a/f2/da/6af2daba46533ee232c2d1ca599594b2.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-25',
-    title: 'La Liga',
-    imageUrl: 'https://i.pinimg.com/474x/f7/1f/f0/f71ff090f00e037292c308128706d8f7.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-26',
-    title: 'Orange Is The New Black',
-    imageUrl: 'https://i.pinimg.com/474x/a7/a6/77/a7a67754b2dea5d4069746d034665486.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-27',
-    title: 'UEFA Europa League',
-    imageUrl: 'https://i.pinimg.com/236x/51/52/fb/5152fb3476e9153d5bd6fc79c4097e56.jpg',
-    badge: 'Live Sport'
-  },
-  {
-    id: 'poster-28',
-    title: 'La Casa de Papel',
-    imageUrl: 'https://i.pinimg.com/474x/dc/5b/23/dc5b23c8bbef4c535e2fa8435b17fd59.jpg',
-    badge: 'Netflix'
-  },
-  {
-    id: 'poster-30',
-    title: 'Dune',
-    imageUrl: 'https://i.pinimg.com/474x/3a/c9/6d/3ac96daf6f926e16c6d09e63ace1a46b.jpg',
-    badge: 'HBO MAX'
-  }
+  { id: 'poster-1',  title: 'Inception',                 imageUrl: '/images/movie_posters/poster-1.jpg',  badge: 'Netflix' },
+  { id: 'poster-2',  title: 'No Time to Die',             imageUrl: '/images/movie_posters/poster-2.jpg',  badge: 'Prime Video' },
+  { id: 'poster-3',  title: 'Stranger Things',            imageUrl: '/images/movie_posters/poster-3.jpg',  badge: 'Netflix' },
+  { id: 'poster-4',  title: 'Basketball',                 imageUrl: '/images/movie_posters/poster-4.jpg',  badge: 'Live Sport' },
+  { id: 'poster-5',  title: 'Motorsport',                 imageUrl: '/images/movie_posters/poster-5.jpg',  badge: 'Live Sport' },
+  { id: 'poster-6',  title: 'Keizersvrouwen',             imageUrl: '/images/movie_posters/poster-6.jpg',  badge: 'Netflix' },
+  { id: 'poster-7',  title: 'Fight Club',                 imageUrl: '/images/movie_posters/poster-7.jpg',  badge: 'Prime Video' },
+  { id: 'poster-8',  title: 'Champions League',           imageUrl: '/images/movie_posters/poster-8.jpg',  badge: 'Live Sport' },
+  { id: 'poster-9',  title: 'Pulp Fiction',               imageUrl: '/images/movie_posters/poster-9.jpg',  badge: 'Netflix' },
+  { id: 'poster-10', title: 'The Godfather',              imageUrl: '/images/movie_posters/poster-10.jpg', badge: 'Prime Video' },
+  { id: 'poster-11', title: 'Eredivisie',                 imageUrl: '/images/movie_posters/poster-11.jpg', badge: 'Live Sport' },
+  { id: 'poster-12', title: 'Serie A',                    imageUrl: '/images/movie_posters/poster-12.jpg', badge: 'Live Sport' },
+  { id: 'poster-13', title: 'Squid Game',                 imageUrl: '/images/movie_posters/poster-13.jpg', badge: 'Netflix' },
+  { id: 'poster-14', title: 'The Dark Knight',            imageUrl: '/images/movie_posters/poster-14.jpg', badge: 'HBO MAX' },
+  { id: 'poster-15', title: 'Les Schtroumpfs',            imageUrl: '/images/movie_posters/poster-15.jpg', badge: 'Netflix' },
+  { id: 'poster-16', title: 'Narcos',                     imageUrl: '/images/movie_posters/poster-16.jpg', badge: 'Netflix' },
+  { id: 'poster-17', title: 'CAF Champions League',       imageUrl: '/images/movie_posters/poster-17.jpg', badge: 'Live Sport' },
+  { id: 'poster-18', title: 'The Golden Hour',            imageUrl: '/images/movie_posters/poster-18.jpg', badge: 'Prime Video' },
+  { id: 'poster-19', title: 'Athletics',                  imageUrl: '/images/movie_posters/poster-19.jpg', badge: 'Live Sport' },
+  { id: 'poster-20', title: 'Bundesliga',                 imageUrl: '/images/movie_posters/poster-20.jpg', badge: 'Live Sport' },
+  { id: 'poster-21', title: 'Champions Hockey League',    imageUrl: '/images/movie_posters/poster-21.jpg', badge: 'Live Sport' },
+  { id: 'poster-22', title: 'Mia and Me',                 imageUrl: '/images/movie_posters/poster-22.jpg', badge: 'Netflix' },
+  { id: 'poster-23', title: 'The Matrix',                 imageUrl: '/images/movie_posters/poster-23.jpg', badge: 'HBO MAX' },
+  { id: 'poster-24', title: 'Amstel Gold Race',           imageUrl: '/images/movie_posters/poster-24.jpg', badge: 'Live Sport' },
+  { id: 'poster-25', title: 'La Liga',                    imageUrl: '/images/movie_posters/poster-25.jpg', badge: 'Live Sport' },
+  { id: 'poster-26', title: 'Orange Is The New Black',    imageUrl: '/images/movie_posters/poster-26.jpg', badge: 'Netflix' },
+  { id: 'poster-27', title: 'UEFA Europa League',         imageUrl: '/images/movie_posters/poster-27.jpg', badge: 'Live Sport' },
+  { id: 'poster-28', title: 'La Casa de Papel',           imageUrl: '/images/movie_posters/poster-28.jpg', badge: 'Netflix' },
+  { id: 'poster-30', title: 'Dune',                       imageUrl: '/images/movie_posters/poster-30.jpg', badge: 'HBO MAX' },
 ];
