@@ -88,11 +88,11 @@ export default function StreamingReleases() {
 
         {/* Film posters carousel - CSS step animation */}
         <div className="overflow-hidden">
-          <div className="flex gap-4 animate-marquee w-max">
+          <div className="flex gap-3 sm:gap-4 animate-marquee min-w-max">
             {DUPLICATED_POSTERS.map((poster, idx) => (
               <div
                 key={`${poster.id}-${idx}`}
-                className="min-w-[150px] sm:min-w-[220px] md:min-w-[260px] h-[260px] sm:h-[360px] md:h-[400px] rounded-2xl sm:rounded-3xl overflow-hidden relative group/item shadow-2xl shadow-slate-300/35 flex-shrink-0 bg-slate-900"
+                className="w-[130px] sm:w-[220px] md:w-[260px] h-[200px] sm:h-[360px] md:h-[400px] rounded-xl sm:rounded-3xl overflow-hidden relative shadow-xl shadow-slate-300/35 flex-shrink-0 bg-slate-900"
               >
                 <img
                   src={poster.imageUrl}
