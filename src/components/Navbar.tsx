@@ -36,11 +36,7 @@ export default function Navbar({ onPricingClick }: NavbarProps) {
             {/* Left Side: Logo & Verified Badge */}
             <div className="flex items-center gap-3">
               <a href="/" className="flex items-center gap-2 hover:opacity-95 transition-opacity">
-                <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-blue-600 via-cyan-500 to-emerald-500 flex items-center justify-center shadow-lg shadow-emerald-500/10">
-                  <svg viewBox="0 0 24 24" fill="none" className="w-4 h-4 text-white fill-current translate-x-0.5">
-                    <path d="M8 5V19L19 12L8 5Z" />
-                  </svg>
-                </div>
+                <img src="/tv.png" alt="TvLux Logo" className="w-9 h-9 object-contain rounded-xl" />
                 <span className="font-bold text-2xl tracking-tight text-slate-900">
                   Tv<span className="text-emerald-500">Lux</span>
                 </span>
@@ -65,7 +61,6 @@ export default function Navbar({ onPricingClick }: NavbarProps) {
                   <Phone className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
                 <span className="font-mono hidden md:inline">+44 7449 708976</span>
-                <span className="font-mono text-xs md:hidden">+44 744..</span>
               </button>
 
               {/* Prijs Button with Blue/Emerald Gradient */}

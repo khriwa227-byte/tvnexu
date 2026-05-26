@@ -48,21 +48,7 @@ export default function Footer({ onScrollTo }: FooterProps) {
           {/* Column 1: Brand & Logo */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <svg viewBox="0 0 24 24" fill="none" className="w-8 h-8 shrink-0" xmlns="http://www.w3.org/2000/svg">
-                <path d="M3 3 L21 12 L3 21 Z" fill="url(#outerGrad)" stroke="#10b981" strokeWidth="2" strokeLinejoin="round" />
-                <path d="M7 6.5 L17 12 L7 17.5 Z" fill="url(#innerGrad)" stroke="#06b6d4" strokeWidth="2" strokeLinejoin="round" />
-                <path d="M10 9.5 L14 12 L10 14.5 Z" fill="#10b981" />
-                <defs>
-                  <linearGradient id="outerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#10b981" stopOpacity="0.2" />
-                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.1" />
-                  </linearGradient>
-                  <linearGradient id="innerGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" stopColor="#06b6d4" stopOpacity="0.3" />
-                    <stop offset="100%" stopColor="#3b82f6" stopOpacity="0.2" />
-                  </linearGradient>
-                </defs>
-              </svg>
+              <img src="/tv.png" alt="TvLux Logo" className="w-8 h-8 object-contain rounded-xl shrink-0" />
               <span className="font-bold text-xl text-slate-900 tracking-tight font-sans">TvLux</span>
             </div>
             
