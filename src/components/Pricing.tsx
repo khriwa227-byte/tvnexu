@@ -18,7 +18,7 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
         
         {/* Headings */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <h2 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-tight text-slate-900">
             Onze <span className="bg-gradient-to-r from-blue-600 to-emerald-500 bg-clip-text text-transparent">Abonnementen</span>
           </h2>
           <p className="text-sm sm:text-base text-slate-500">

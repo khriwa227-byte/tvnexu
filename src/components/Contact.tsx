@@ -10,7 +10,7 @@ export default function Contact() {
     <section id="contact-section" className="py-16 bg-white relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        <div className="bg-slate-900 rounded-[32px] sm:rounded-[40px] text-white p-8 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl shadow-blue-950/45">
+        <div className="bg-slate-900 rounded-[24px] sm:rounded-[40px] text-white p-6 sm:p-12 lg:p-16 relative overflow-hidden shadow-2xl shadow-blue-950/45">
           
           {/* Decorative glowing sphere backgrounds */}
           <div className="absolute top-0 right-0 w-80 h-80 bg-blue-500/10 rounded-full blur-3xl pointer-events-none" />

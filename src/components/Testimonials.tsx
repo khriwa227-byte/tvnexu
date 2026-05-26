@@ -72,14 +72,14 @@ export default function Testimonials() {
           {/* Prev / Next buttons */}
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-5 w-11 h-11 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-slate-50 transition-colors border border-slate-100"
+            className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-2 sm:-translate-x-5 w-10 h-10 sm:w-11 sm:h-11 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-slate-50 transition-colors border border-slate-100"
             aria-label="Vorige"
           >
             <ChevronLeft className="w-5 h-5 text-slate-700 stroke-[2.5]" />
           </button>
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 translate-x-5 w-11 h-11 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-slate-50 transition-colors border border-slate-100"
+            className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:translate-x-5 w-10 h-10 sm:w-11 sm:h-11 bg-white rounded-full shadow-lg flex items-center justify-center hover:bg-slate-50 transition-colors border border-slate-100"
             aria-label="Volgende"
           >
             <ChevronRight className="w-5 h-5 text-slate-700 stroke-[2.5]" />

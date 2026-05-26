@@ -75,7 +75,7 @@ export default function HowItWorks({ onPricingClick }: HowItWorksProps) {
 
         {/* Bottom CTA Card */}
         <div className="pt-8" id="how-it-works-cta-banner">
-          <div className="bg-white rounded-[32px] p-8 text-center max-w-xl mx-auto space-y-6 shadow-2xl shadow-slate-200">
+          <div className="bg-white rounded-[24px] sm:rounded-[32px] p-6 sm:p-8 text-center max-w-xl mx-auto space-y-6 shadow-2xl shadow-slate-200">
             <h3 className="text-2xl font-bold text-slate-900 leading-snug">
               Kies de #1 <span className="text-blue-600">I.P.T.V</span> provider in Nederland, België en Canada
             </h3>

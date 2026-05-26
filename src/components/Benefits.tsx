@@ -39,7 +39,7 @@ export default function Benefits({ onPricingClick }: BenefitsProps) {
             <div
               key={benefit.id}
               id={`benefit-${benefit.id}`}
-              className="bg-white rounded-3xl p-8 shadow-2xl shadow-slate-200 hover:scale-[1.01] transition-all flex flex-col justify-between"
+              className="bg-white rounded-3xl p-6 sm:p-8 shadow-2xl shadow-slate-200 hover:scale-[1.01] transition-all flex flex-col justify-between"
             >
               <div className="space-y-4">
                 
