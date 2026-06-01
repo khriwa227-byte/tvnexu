@@ -12,7 +12,7 @@ export const BENEFITS: Benefit[] = [
     id: 'ultrasast-connection',
     icon: 'zap',
     title: 'Ultrasnelle Verbinding',
-    description: 'In tegenstelling tot andere IPTV-providers gebruikt TvLux toegewijde Europese servers van hoge kwaliteit. Onze TV-kanalen openen in minder dan 0,5 seconde.',
+    description: 'In tegenstelling tot andere IPTV-providers gebruikt TvLux (tvlux.org) toegewijde Europese servers van hoge kwaliteit. Onze TV-kanalen openen in minder dan 0,5 seconde.',
     color: 'text-green-500 bg-green-50'
   },
   {
@@ -156,6 +156,11 @@ export const DEVICES: DeviceItem[] = [
 ];
 
 export const FAQ_ITEMS: FAQItem[] = [
+  {
+    id: 'faq-0',
+    question: 'Wat is TvLux (TvLuxury) en wat maakt het anders?',
+    answer: 'TvLux, ook bekend als TvLuxury of TvLuxuryNL, is een premium IPTV-aanbieder voor Nederland, België en Canada. In tegenstelling tot andere aanbieders gebruikt TvLux uitsluitend toegewijde Europese servers voor maximale stabiliteit: kanalen laden in minder dan 0,5 seconde. U krijgt 10.000+ live zenders, 249.000+ films & series en 4K/8K kwaliteit — zonder automatische incasso of verborgen kosten.'
+  },
   {
     id: 'faq-1',
     question: 'Is de prijs maandelijks? Word ik opnieuw gefactureerd?',

@@ -33,19 +33,18 @@ interface DeviceCompatibilityProps {
 
 export default function DeviceCompatibility({ onPricingClick }: DeviceCompatibilityProps) {
   return (
-    <section id="devices-section" className="py-16 bg-slate-50 relative overflow-hidden">
+    <section id="devices-section" className="py-16 bg-slate-900 relative overflow-hidden">
 
-      {/* Background Dots Grid decoration */}
-      <div className="absolute inset-0 h-full w-full bg-[radial-gradient(#333333_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none opacity-30" />
+      {/* Dot grid */}
+      <div className="absolute inset-0 h-full w-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none opacity-[0.03]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 space-y-12 text-center">
 
-        {/* Headings */}
         <div className="space-y-4 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white">
             Compatibel met al uw apparaten
           </h2>
-          <p className="text-sm sm:text-base text-slate-500 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto">
             Wij streven er naar om ondersteuning te bieden voor al uw favoriete apparaten. Geniet van naadloze toegang op elk apparaat.
           </p>
         </div>
@@ -56,7 +55,7 @@ export default function DeviceCompatibility({ onPricingClick }: DeviceCompatibil
             <div
               key={device.id}
               id={`device-card-${device.id}`}
-              className="bg-white rounded-2xl p-4 shadow-2xl shadow-slate-200 flex flex-col items-center justify-center h-24 hover:scale-[1.05] transition-all cursor-default"
+              className="bg-slate-800 rounded-2xl p-4 border border-white/8 shadow-xl shadow-black/20 flex flex-col items-center justify-center h-24 hover:scale-[1.05] hover:border-white/15 transition-all cursor-default"
             >
               <img
                 src={device.logoUrl}
@@ -68,12 +67,11 @@ export default function DeviceCompatibility({ onPricingClick }: DeviceCompatibil
           ))}
         </div>
 
-        {/* CTA */}
         <div className="pt-6">
           <button
             id="devices-pricing-cta-btn"
             onClick={onPricingClick}
-            className="px-8 py-4 bg-gradient-to-r from-blue-600 to-emerald-500 hover:from-blue-700 hover:to-emerald-600 text-white font-semibold rounded-2xl shadow-lg transition-all text-xs sm:text-sm tracking-widest cursor-pointer uppercase transform hover:scale-102 active:scale-98"
+            className="px-8 py-4 bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 text-white font-semibold rounded-2xl shadow-lg shadow-sky-500/15 transition-all text-xs sm:text-sm tracking-widest cursor-pointer uppercase transform hover:scale-102 active:scale-98"
           >
             BEKIJK ONZE ABONNEMENTEN
           </button>

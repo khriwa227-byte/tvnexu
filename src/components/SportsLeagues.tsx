@@ -28,13 +28,13 @@ export default function SportsLeagues() {
   const scrollingItems = [...SPORTS_LOGOS, ...SPORTS_LOGOS];
 
   return (
-    <section id="sports-leagues-section" className="py-8 bg-slate-50/30 overflow-hidden">
+    <section id="sports-leagues-section" className="py-8 bg-slate-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-white rounded-[32px] py-6 px-4 sm:px-8 relative overflow-hidden">
+        <div className="bg-slate-800 rounded-[32px] py-6 px-4 sm:px-8 relative overflow-hidden border border-white/8">
 
           {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-white to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-white to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-800 to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-800 to-transparent z-10 pointer-events-none" />
 
           <div className="overflow-hidden select-none">
             <div className="flex w-max animate-marquee gap-8 sm:gap-12 md:gap-16">

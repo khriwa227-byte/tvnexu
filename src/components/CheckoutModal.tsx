@@ -82,23 +82,23 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.95, y: 20 }}
             transition={{ type: 'spring', duration: 0.5 }}
-            className="relative w-full max-w-xl bg-white rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-gray-100 my-2 sm:my-8"
+            className="relative w-full max-w-xl bg-slate-800 rounded-2xl sm:rounded-3xl shadow-2xl overflow-hidden border border-white/10 my-2 sm:my-8"
           >
             {/* Header */}
-            <div className="flex items-center justify-between p-4 sm:p-6 bg-slate-50 border-b border-gray-100">
+            <div className="flex items-center justify-between p-4 sm:p-6 bg-slate-900/50 border-b border-white/8">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+                <div className="w-10 h-10 rounded-full bg-sky-500/15 flex items-center justify-center text-sky-400">
                   <Sparkles className="w-5 h-5" />
                 </div>
                 <div>
-                  <h3 id="checkout-title" className="text-base sm:text-xl font-semibold text-gray-950">Abonnement Activeren</h3>
-                  <p className="text-xs text-gray-500 font-sans">TvLux Premium IPTV Service 🇳🇱 🇧🇪</p>
+                  <h3 id="checkout-title" className="text-base sm:text-xl font-semibold text-white">Abonnement Activeren</h3>
+                  <p className="text-xs text-slate-400 font-sans">TvLux Premium IPTV Service 🇳🇱 🇧🇪</p>
                 </div>
               </div>
               <button
                 id="close-checkout-btn"
                 onClick={onClose}
-                className="p-2 text-gray-400 hover:text-gray-600 hover:bg-gray-100 rounded-full transition-colors"
+                className="p-2 text-slate-500 hover:text-slate-300 hover:bg-white/10 rounded-full transition-colors"
                 aria-label="Sluiten"
               >
                 <X className="w-5 h-5" />
@@ -107,20 +107,20 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
 
             {/* Steps Indicator */}
             {!orderCompleted && (
-              <div className="flex items-center justify-center gap-2 px-6 py-4 bg-blue-50/50 border-b border-gray-100">
+              <div className="flex items-center justify-center gap-2 px-6 py-4 bg-slate-900/30 border-b border-white/8">
                 <div className="flex items-center gap-1.5">
-                  <div className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center ${step >= 1 ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'}`}>1</div>
-                  <span className="text-xs font-medium text-gray-700">Configuratie</span>
+                  <div className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center ${step >= 1 ? 'bg-sky-500 text-white' : 'bg-slate-700 text-slate-400'}`}>1</div>
+                  <span className="text-xs font-medium text-slate-400">Configuratie</span>
                 </div>
-                <div className="w-8 h-px bg-gray-200" />
+                <div className="w-8 h-px bg-slate-700" />
                 <div className="flex items-center gap-1.5">
-                  <div className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center ${step >= 2 ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'}`}>2</div>
-                  <span className="text-xs font-medium text-gray-700">Gegevens</span>
+                  <div className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center ${step >= 2 ? 'bg-sky-500 text-white' : 'bg-slate-700 text-slate-400'}`}>2</div>
+                  <span className="text-xs font-medium text-slate-400">Gegevens</span>
                 </div>
-                <div className="w-8 h-px bg-gray-200" />
+                <div className="w-8 h-px bg-slate-700" />
                 <div className="flex items-center gap-1.5">
-                  <div className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center ${step >= 3 ? 'bg-blue-600 text-white' : 'bg-gray-200 text-gray-600'}`}>3</div>
-                  <span className="text-xs font-medium text-gray-700">Betaling</span>
+                  <div className={`w-6 h-6 rounded-full text-xs font-bold flex items-center justify-center ${step >= 3 ? 'bg-sky-500 text-white' : 'bg-slate-700 text-slate-400'}`}>3</div>
+                  <span className="text-xs font-medium text-slate-400">Betaling</span>
                 </div>
               </div>
             )}
@@ -134,30 +134,30 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
                   className="text-center py-8"
                   id="order-success-screen"
                 >
-                  <div className="w-16 h-16 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
+                  <div className="w-16 h-16 bg-emerald-500/15 text-emerald-400 rounded-full flex items-center justify-center mx-auto mb-4 shadow-md">
                     <Check className="w-8 h-8 stroke-[3]" />
                   </div>
-                  <h4 className="text-2xl font-bold text-gray-950 mb-2">Bestelling Ontvangen!</h4>
-                  <p className="text-sm text-gray-600 max-w-sm mx-auto mb-6">
+                  <h4 className="text-2xl font-bold text-white mb-2">Bestelling Ontvangen!</h4>
+                  <p className="text-sm text-slate-400 max-w-sm mx-auto mb-6">
                     Bedankt voor uw vertrouwen in TvLux. Volg de stappen hieronder om direct te starten.
                   </p>
 
-                  <div className="bg-slate-50 border border-gray-100 rounded-2xl p-4 text-left max-w-sm mx-auto mb-4 text-xs text-gray-600 space-y-2">
-                    <div className="flex justify-between font-bold text-gray-900 border-b border-gray-200 pb-2 mb-2">
+                  <div className="bg-slate-900/50 border border-white/8 rounded-2xl p-4 text-left max-w-sm mx-auto mb-4 text-xs text-slate-400 space-y-2">
+                    <div className="flex justify-between font-bold text-white border-b border-white/8 pb-2 mb-2">
                       <span>Pakket:</span>
-                      <span className="text-blue-600">{plan.name}</span>
+                      <span className="text-sky-400">{plan.name}</span>
                     </div>
                     <div className="flex justify-between">
                       <span>Apparaat:</span>
-                      <span className="font-semibold text-gray-800">{deviceType}</span>
+                      <span className="font-semibold text-slate-200">{deviceType}</span>
                     </div>
                     <div className="flex justify-between">
                       <span>E-mailadres:</span>
-                      <span className="font-semibold text-gray-800">{email}</span>
+                      <span className="font-semibold text-slate-200">{email}</span>
                     </div>
-                    <div className="flex justify-between font-semibold text-gray-900 mt-2 pt-2 border-t border-gray-200">
+                    <div className="flex justify-between font-semibold text-white mt-2 pt-2 border-t border-white/8">
                       <span>Te betalen:</span>
-                      <span className="text-blue-600">€{plan.price},00</span>
+                      <span className="text-sky-400">€{plan.price},00</span>
                     </div>
                   </div>
 
@@ -184,28 +184,28 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
               ) : (
                 <form onSubmit={handleSubmit} id="checkout-form" className="space-y-6">
                   {/* Summary of Selected Plan */}
-                  <div className="flex items-center justify-between p-4 bg-slate-50 border border-gray-100 rounded-2xl">
+                  <div className="flex items-center justify-between p-4 bg-slate-900/50 border border-white/8 rounded-2xl">
                     <div>
-                      <span className="px-2 py-0.5 text-[10px] font-bold text-blue-700 bg-blue-100 rounded-full uppercase tracking-wider">{plan.name} Pakket</span>
-                      <h4 className="mt-1 text-base font-bold text-slate-900">{plan.subtitle}</h4>
+                      <span className="px-2 py-0.5 text-[10px] font-bold text-sky-400 bg-sky-500/10 rounded-full uppercase tracking-wider">{plan.name} Pakket</span>
+                      <h4 className="mt-1 text-base font-bold text-white">{plan.subtitle}</h4>
                     </div>
                     <div className="text-right">
-                      <p className="text-2xl font-black text-blue-600">&euro;{plan.price}</p>
-                      <p className="text-[10px] text-gray-500 font-medium">Eenmalige betaling</p>
+                      <p className="text-2xl font-black text-sky-400">&euro;{plan.price}</p>
+                      <p className="text-[10px] text-slate-500 font-medium">Eenmalige betaling</p>
                     </div>
                   </div>
 
                   {step === 1 && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4">
                       <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-2">
+                        <label className="block text-sm font-semibold text-slate-300 mb-2">
                           Voor welk apparaat wilt u de IPTV activeren?
                         </label>
                         <select
                           id="device-select"
                           value={deviceType}
                           onChange={(e) => setDeviceType(e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow outline-none text-sm text-gray-800 bg-white"
+                          className="w-full px-4 py-3 rounded-xl border border-white/10 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow outline-none text-sm text-white bg-slate-700"
                         >
                           <option>Smart TV (IBO Player/Smarters)</option>
                           <option>Amazon Fire TV Stick</option>
@@ -215,14 +215,14 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
                           <option>Computer / Laptop (VLC/Web Player)</option>
                           <option>Smartphone (Android/iOS)</option>
                         </select>
-                        <p className="text-[11px] text-gray-400 mt-1">Standaard installatie-instructies worden afgestemd op uw apparaat.</p>
+                        <p className="text-[11px] text-slate-500 mt-1">Standaard installatie-instructies worden afgestemd op uw apparaat.</p>
                       </div>
 
-                      <div className="bg-blue-50 border border-blue-100 p-3.5 rounded-2xl flex gap-3 text-blue-800 text-xs">
-                        <Shield className="w-5 h-5 shrink-0 text-blue-600 mt-0.5" />
+                      <div className="bg-sky-500/8 border border-sky-500/20 p-3.5 rounded-2xl flex gap-3 text-sky-400 text-xs">
+                        <Shield className="w-5 h-5 shrink-0 mt-0.5" />
                         <div>
                           <p className="font-bold">IBO Pro Player Activering</p>
-                          <p className="mt-0.5">We verlenen u gratis activering voor de IBO Pro Player app binnen dit abonnement!</p>
+                          <p className="mt-0.5 text-slate-400">We verlenen u gratis activering voor de IBO Pro Player app binnen dit abonnement!</p>
                         </div>
                       </div>
                     </motion.div>
@@ -231,8 +231,8 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
                   {step === 2 && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4">
                       <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                          E-mailadres <span className="text-red-500">*</span>
+                        <label className="block text-sm font-semibold text-slate-300 mb-1.5">
+                          E-mailadres <span className="text-red-400">*</span>
                         </label>
                         <input
                           type="email"
@@ -240,27 +240,27 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
                           placeholder="bijv. jouwnaam@gmail.com"
                           value={email}
                           onChange={(e) => setEmail(e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow outline-none text-sm text-gray-800"
+                          className="w-full px-4 py-3 rounded-xl border border-white/10 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow outline-none text-sm text-white bg-slate-700 placeholder:text-slate-500"
                         />
-                        <p className="text-[11px] text-gray-400 mt-1">Hier sturen we je inlogcodes en de handige installatiegids naartoe (binnen 10 min).</p>
+                        <p className="text-[11px] text-slate-500 mt-1">Hier sturen we je inlogcodes en de handige installatiegids naartoe (binnen 10 min).</p>
                       </div>
 
                       <div>
-                        <label className="block text-sm font-semibold text-gray-700 mb-1.5">
-                          WhatsApp / Telefoonnummer <span className="text-gray-400 text-xs">(Optioneel voor live hulplijn)</span>
+                        <label className="block text-sm font-semibold text-slate-300 mb-1.5">
+                          WhatsApp / Telefoonnummer <span className="text-slate-500 text-xs">(Optioneel voor live hulplijn)</span>
                         </label>
                         <input
                           type="tel"
                           placeholder="bijv. +31 6 12345678"
                           value={phone}
                           onChange={(e) => setPhone(e.target.value)}
-                          className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-shadow outline-none text-sm text-gray-800"
+                          className="w-full px-4 py-3 rounded-xl border border-white/10 focus:ring-2 focus:ring-sky-500 focus:border-sky-500 transition-shadow outline-none text-sm text-white bg-slate-700 placeholder:text-slate-500"
                         />
-                        <p className="text-[11px] text-gray-400 mt-1">Handig als je activering en directe chat support wenst via WhatsApp.</p>
+                        <p className="text-[11px] text-slate-500 mt-1">Handig als je activering en directe chat support wenst via WhatsApp.</p>
                       </div>
 
-                      <div className="bg-green-50 text-green-800 border border-green-100 p-3.5 rounded-2xl text-xs flex gap-2.5">
-                        <Check className="w-5 h-5 text-green-600 shrink-0" />
+                      <div className="bg-emerald-500/8 text-emerald-400 border border-emerald-500/20 p-3.5 rounded-2xl text-xs flex gap-2.5">
+                        <Check className="w-5 h-5 shrink-0" />
                         <p className="font-sans font-medium">Zodra we je order binnen krijgen gaan we gelijk over tot activatie van je IPTV lijn en servers!</p>
                       </div>
                     </motion.div>
@@ -268,100 +268,65 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
 
                   {step === 3 && (
                     <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} className="space-y-4">
-                      <p className="text-sm font-semibold text-gray-700 mb-2">Selecteer uw favoriete betaalmethode:</p>
+                      <p className="text-sm font-semibold text-slate-300 mb-2">Selecteer uw favoriete betaalmethode:</p>
 
                       <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" id="payment-methods-grid">
-                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'ideal' ? 'border-pink-500 bg-pink-50/20' : 'border-gray-200 hover:bg-slate-50'}`}>
-                          <input
-                            type="radio"
-                            name="payment"
-                            value="ideal"
-                            className="text-pink-600 focus:ring-pink-500"
-                            checked={paymentMethod === 'ideal'}
-                            onChange={() => setPaymentMethod('ideal')}
-                          />
-                          <span className="text-sm font-semibold text-gray-800">iDEAL (Nederland)</span>
+                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'ideal' ? 'border-pink-400 bg-pink-500/10' : 'border-white/10 hover:bg-white/5'}`}>
+                          <input type="radio" name="payment" value="ideal" className="text-pink-500 focus:ring-pink-500" checked={paymentMethod === 'ideal'} onChange={() => setPaymentMethod('ideal')} />
+                          <span className="text-sm font-semibold text-slate-200">iDEAL (Nederland)</span>
                         </label>
 
-                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'bancontact' ? 'border-blue-600 bg-blue-50/20' : 'border-gray-200 hover:bg-slate-50'}`}>
-                          <input
-                            type="radio"
-                            name="payment"
-                            value="bancontact"
-                            className="text-blue-600 focus:ring-blue-500"
-                            checked={paymentMethod === 'bancontact'}
-                            onChange={() => setPaymentMethod('bancontact')}
-                          />
-                          <span className="text-sm font-semibold text-gray-800">Bancontact (België)</span>
+                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'bancontact' ? 'border-sky-400 bg-sky-500/10' : 'border-white/10 hover:bg-white/5'}`}>
+                          <input type="radio" name="payment" value="bancontact" className="text-sky-500 focus:ring-sky-500" checked={paymentMethod === 'bancontact'} onChange={() => setPaymentMethod('bancontact')} />
+                          <span className="text-sm font-semibold text-slate-200">Bancontact (België)</span>
                         </label>
 
-                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'paypal' ? 'border-indigo-600 bg-indigo-50/20' : 'border-gray-200 hover:bg-slate-50'}`}>
-                          <input
-                            type="radio"
-                            name="payment"
-                            value="paypal"
-                            className="text-indigo-600 focus:ring-indigo-500"
-                            checked={paymentMethod === 'paypal'}
-                            onChange={() => setPaymentMethod('paypal')}
-                          />
-                          <span className="text-sm font-semibold text-gray-800">PayPal Express</span>
+                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'paypal' ? 'border-indigo-400 bg-indigo-500/10' : 'border-white/10 hover:bg-white/5'}`}>
+                          <input type="radio" name="payment" value="paypal" className="text-indigo-500 focus:ring-indigo-500" checked={paymentMethod === 'paypal'} onChange={() => setPaymentMethod('paypal')} />
+                          <span className="text-sm font-semibold text-slate-200">PayPal Express</span>
                         </label>
 
-                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'crypto' ? 'border-amber-600 bg-amber-50/20' : 'border-gray-200 hover:bg-slate-50'}`}>
-                          <input
-                            type="radio"
-                            name="payment"
-                            value="crypto"
-                            className="text-amber-600 focus:ring-amber-500"
-                            checked={paymentMethod === 'crypto'}
-                            onChange={() => setPaymentMethod('crypto')}
-                          />
-                          <span className="text-sm font-semibold text-gray-800">Bitcoin / Crypto ₿</span>
+                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'crypto' ? 'border-amber-400 bg-amber-500/10' : 'border-white/10 hover:bg-white/5'}`}>
+                          <input type="radio" name="payment" value="crypto" className="text-amber-500 focus:ring-amber-500" checked={paymentMethod === 'crypto'} onChange={() => setPaymentMethod('crypto')} />
+                          <span className="text-sm font-semibold text-slate-200">Bitcoin / Crypto ₿</span>
                         </label>
 
-                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'banktransfer' ? 'border-slate-600 bg-slate-50/40' : 'border-gray-200 hover:bg-slate-50'}`}>
-                          <input
-                            type="radio"
-                            name="payment"
-                            value="banktransfer"
-                            className="text-slate-600 focus:ring-slate-500"
-                            checked={paymentMethod === 'banktransfer'}
-                            onChange={() => setPaymentMethod('banktransfer')}
-                          />
-                          <span className="text-sm font-semibold text-gray-800">Bankoverschrijving</span>
+                        <label className={`flex items-center gap-3 p-3.5 rounded-xl border cursor-pointer transition-all ${paymentMethod === 'banktransfer' ? 'border-slate-400 bg-slate-500/10' : 'border-white/10 hover:bg-white/5'}`}>
+                          <input type="radio" name="payment" value="banktransfer" className="text-slate-400 focus:ring-slate-400" checked={paymentMethod === 'banktransfer'} onChange={() => setPaymentMethod('banktransfer')} />
+                          <span className="text-sm font-semibold text-slate-200">Bankoverschrijving</span>
                         </label>
                       </div>
 
-                      <div className="bg-slate-50 border border-gray-100 rounded-2xl p-4 mt-4 text-xs space-y-2">
+                      <div className="bg-slate-900/50 border border-white/8 rounded-2xl p-4 mt-4 text-xs space-y-2">
                         <div className="flex justify-between font-medium">
-                          <span className="text-gray-500">Subtotaal:</span>
-                          <span className="text-gray-800">&euro;{plan.price},00</span>
+                          <span className="text-slate-500">Subtotaal:</span>
+                          <span className="text-slate-200">&euro;{plan.price},00</span>
                         </div>
                         <div className="flex justify-between font-medium">
-                          <span className="text-gray-500">Activatiekosten &amp; BTW:</span>
-                          <span className="text-gray-800">&euro;0,00</span>
+                          <span className="text-slate-500">Activatiekosten &amp; BTW:</span>
+                          <span className="text-slate-200">&euro;0,00</span>
                         </div>
-                        <div className="flex justify-between text-sm font-bold text-gray-950 pt-2 border-t border-gray-200">
+                        <div className="flex justify-between text-sm font-bold text-white pt-2 border-t border-white/8">
                           <span>Totaalbedrag:</span>
-                          <span className="text-blue-600">&euro;{total},00</span>
+                          <span className="text-sky-400">&euro;{total},00</span>
                         </div>
                       </div>
 
-                      <div className="text-[11px] text-gray-400 text-center flex items-center justify-center gap-1.5 pt-2">
-                        <Lock className="w-3.5 h-3.5 text-green-600" />
+                      <div className="text-[11px] text-slate-500 text-center flex items-center justify-center gap-1.5 pt-2">
+                        <Lock className="w-3.5 h-3.5 text-emerald-500" />
                         <span>Beveiligde SSL 256-bit betaling. Uw gegevens worden nooit gedeeld.</span>
                       </div>
                     </motion.div>
                   )}
 
                   {/* Buttons Navigation */}
-                  <div className="flex gap-3 pt-4 border-t border-gray-100">
+                  <div className="flex gap-3 pt-4 border-t border-white/8">
                     {step > 1 && (
                       <button
                         type="button"
                         id="prev-step-btn"
                         onClick={() => setStep(prev => prev - 1)}
-                        className="px-5 py-3 hover:bg-gray-100 border border-gray-200 text-gray-700 font-semibold rounded-xl text-sm transition-all"
+                        className="px-5 py-3 hover:bg-white/10 border border-white/10 text-slate-300 font-semibold rounded-xl text-sm transition-all"
                       >
                         Vorige
                       </button>
@@ -371,7 +336,7 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
                       type="submit"
                       id="next-step-btn"
                       disabled={isSubmitting}
-                      className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-blue-600 to-emerald-600 hover:from-blue-700 hover:to-emerald-700 text-white font-bold rounded-xl shadow-lg hover:shadow-xl transition-all text-sm disabled:opacity-50"
+                      className="flex-1 inline-flex items-center justify-center gap-2 px-6 py-3.5 bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 text-white font-bold rounded-xl shadow-lg shadow-sky-500/20 hover:shadow-sky-500/30 transition-all text-sm disabled:opacity-50"
                     >
                       {isSubmitting ? (
                         <span>Even geduld...</span>
@@ -388,7 +353,7 @@ Betaalmethode: ${paymentMethod.toUpperCase()}`;
                       type="button"
                       id="direct-whatsapp-checkout"
                       onClick={handleWhatsAppRedirect}
-                      className="text-xs text-green-700 hover:text-green-900 border-b border-green-500 hover:border-green-700 pb-0.5 mt-2 flex items-center gap-1 font-semibold transition"
+                      className="text-xs text-emerald-500 hover:text-emerald-400 border-b border-emerald-600 hover:border-emerald-400 pb-0.5 mt-2 flex items-center gap-1 font-semibold transition"
                     >
                       Of bestel sneller via direct overleg op WhatsApp 💬
                     </button>

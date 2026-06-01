@@ -27,34 +27,32 @@ const BRAND_LOGOS = [
 const DUPLICATED_POSTERS = [...MOVIE_POSTERS, ...MOVIE_POSTERS];
 
 export default function StreamingReleases() {
-
   return (
-    <section id="streaming-section" className="py-16 bg-white overflow-hidden">
+    <section id="streaming-section" className="py-16 bg-slate-900 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-10">
-        
-        {/* Top Badges & Heading */}
+
+        {/* Heading */}
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <span className="inline-flex items-center px-4 py-1.5 bg-blue-50 text-blue-700 rounded-full font-bold text-xs uppercase tracking-wide">
+          <span className="inline-flex items-center px-4 py-1.5 bg-sky-500/10 text-sky-400 rounded-full font-bold text-xs uppercase tracking-wide border border-sky-500/20">
             Nieuwste Releases
           </span>
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-slate-900 leading-tight">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-white leading-tight">
             Onbeperkt streamen van de nieuwste films, series en live TV-kanalen
           </h2>
-          <p className="text-sm sm:text-base text-slate-500">
+          <p className="text-sm sm:text-base text-slate-400">
             Kijk onbeperkt films en series van de beste kanalen
           </p>
         </div>
 
-        {/* Network Brand Logos Row */}
-        <div className="bg-white rounded-2xl py-6 px-4 shadow-2xl shadow-slate-200 overflow-hidden" id="brand-logos-row">
+        {/* Brand Logos marquee */}
+        <div className="bg-slate-800 rounded-2xl py-6 px-4 border border-white/8 shadow-xl shadow-black/30 overflow-hidden" id="brand-logos-row">
           <div className="relative w-full flex select-none py-2">
-            {/* Infinite scrolling dual-track */}
             <div className="flex items-center shrink-0 animate-marquee min-w-max gap-6 md:gap-8 pr-6 md:pr-8">
               <div className="flex gap-6 md:gap-8 items-center shrink-0 justify-around">
                 {BRAND_LOGOS.map((brand) => (
                   <div
                     key={`set1-${brand.id}`}
-                    className="h-14 w-28 md:h-16 md:w-32 bg-white rounded-xl p-1 flex items-center justify-center border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-300 select-none flex-shrink-0"
+                    className="h-14 w-28 md:h-16 md:w-32 bg-white/8 rounded-xl p-1 flex items-center justify-center border border-white/8 hover:bg-white/12 hover:scale-[1.03] transition-all duration-300 select-none flex-shrink-0"
                   >
                     <img
                       src={brand.logoUrl}
@@ -70,7 +68,7 @@ export default function StreamingReleases() {
                 {BRAND_LOGOS.map((brand) => (
                   <div
                     key={`set2-${brand.id}`}
-                    className="h-14 w-28 md:h-16 md:w-32 bg-white rounded-xl p-1 flex items-center justify-center border border-slate-100 shadow-sm hover:shadow-md hover:scale-[1.03] transition-all duration-300 select-none flex-shrink-0"
+                    className="h-14 w-28 md:h-16 md:w-32 bg-white/8 rounded-xl p-1 flex items-center justify-center border border-white/8 hover:bg-white/12 hover:scale-[1.03] transition-all duration-300 select-none flex-shrink-0"
                   >
                     <img
                       src={brand.logoUrl}
@@ -86,13 +84,13 @@ export default function StreamingReleases() {
           </div>
         </div>
 
-        {/* Film posters carousel - CSS step animation */}
+        {/* Film posters carousel */}
         <div className="overflow-hidden">
           <div className="flex gap-3 sm:gap-4 animate-marquee min-w-max">
             {DUPLICATED_POSTERS.map((poster, idx) => (
               <div
                 key={`${poster.id}-${idx}`}
-                className="w-[130px] sm:w-[220px] md:w-[260px] h-[200px] sm:h-[360px] md:h-[400px] rounded-xl sm:rounded-3xl overflow-hidden relative shadow-xl shadow-slate-300/35 flex-shrink-0 bg-slate-900"
+                className="w-[130px] sm:w-[220px] md:w-[260px] h-[200px] sm:h-[360px] md:h-[400px] rounded-xl sm:rounded-3xl overflow-hidden relative shadow-xl shadow-black/50 flex-shrink-0 bg-slate-800 ring-1 ring-white/5"
               >
                 <img
                   src={poster.imageUrl}
@@ -101,9 +99,9 @@ export default function StreamingReleases() {
                   referrerPolicy="no-referrer"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/40 to-transparent opacity-80" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-950/95 via-slate-950/40 to-transparent opacity-80" />
                 <div className="absolute inset-0 p-5 flex flex-col justify-between z-10">
-                  <span className="px-2.5 py-1 bg-blue-600 text-white font-bold text-[9px] uppercase tracking-wider rounded-full self-start">
+                  <span className="px-2.5 py-1 bg-sky-500 text-white font-bold text-[9px] uppercase tracking-wider rounded-full self-start">
                     {poster.badge || '4K Ultra'}
                   </span>
                   <div className="space-y-2">

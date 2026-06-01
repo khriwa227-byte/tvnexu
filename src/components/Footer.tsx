@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Mail, Phone, X } from 'lucide-react';
+import TvLuxLogo from './TvLuxLogo';
 
 interface FooterProps {
   onScrollTo: (sectionId: string) => void;
@@ -41,38 +42,39 @@ export default function Footer({ onScrollTo }: FooterProps) {
   const [activeDoc, setActiveDoc] = useState<keyof typeof LEGAL_CONTENT | null>(null);
 
   return (
-    <footer id="app-footer" className="bg-[#f8f9fa] border-t border-slate-200/60 py-16">
+    <footer id="app-footer" className="bg-slate-950 border-t border-white/5 py-16">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 text-left">
-          
-          {/* Column 1: Brand & Logo */}
+
+          {/* Brand */}
           <div className="space-y-4">
             <div className="flex items-center gap-3">
-              <img src="/tv.png" alt="TvLux Logo" className="w-8 h-8 object-contain rounded-xl shrink-0" />
-              <span className="font-bold text-xl text-slate-900 tracking-tight font-sans">TvLux</span>
+              <TvLuxLogo size={32} />
+              <span className="font-bold text-xl text-white tracking-tight">
+                TvLux<span className="text-amber-400 text-sm font-bold">.org</span>
+              </span>
             </div>
-            
-            <p className="text-[13px] text-slate-500 leading-relaxed font-sans max-w-xs mr-4">
+            <p className="text-[13px] text-slate-500 leading-relaxed max-w-xs mr-4">
               Premium IPTV-service die wereldwijd een hoogwaardige streaming-ervaring biedt.
             </p>
           </div>
 
-          {/* Column 2: Snelle Links */}
+          {/* Snelle Links */}
           <div>
-            <h4 className="font-bold text-slate-900 text-sm tracking-wide font-sans mb-5">Snelle Links</h4>
-            <ul className="space-y-4 font-sans">
+            <h4 className="font-bold text-white text-sm tracking-wide mb-5">Snelle Links</h4>
+            <ul className="space-y-4">
               <li>
-                <button 
-                  onClick={() => onScrollTo('hero-section')} 
-                  className="text-[13px] text-slate-500 hover:text-emerald-600 transition-colors cursor-pointer text-left block"
+                <button
+                  onClick={() => onScrollTo('hero-section')}
+                  className="text-[13px] text-slate-500 hover:text-sky-400 transition-colors cursor-pointer text-left block"
                 >
                   Over IPTV
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => onScrollTo('pricing-section')} 
-                  className="text-[13px] text-slate-500 hover:text-emerald-600 transition-colors cursor-pointer text-left block"
+                <button
+                  onClick={() => onScrollTo('pricing-section')}
+                  className="text-[13px] text-slate-500 hover:text-sky-400 transition-colors cursor-pointer text-left block"
                 >
                   Abonnementen
                 </button>
@@ -80,58 +82,41 @@ export default function Footer({ onScrollTo }: FooterProps) {
             </ul>
           </div>
 
-          {/* Column 3: Juridisch */}
+          {/* Juridisch */}
           <div>
-            <h4 className="font-bold text-slate-900 text-sm tracking-wide font-sans mb-5">Juridisch</h4>
-            <ul className="space-y-4 font-sans">
+            <h4 className="font-bold text-white text-sm tracking-wide mb-5">Juridisch</h4>
+            <ul className="space-y-4">
               <li>
-                <button 
-                  onClick={() => setActiveDoc('privacy')} 
-                  className="text-[13px] text-slate-500 hover:text-emerald-600 transition-colors cursor-pointer text-left block"
-                >
+                <button onClick={() => setActiveDoc('privacy')} className="text-[13px] text-slate-500 hover:text-sky-400 transition-colors cursor-pointer text-left block">
                   Privacybeleid
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => setActiveDoc('terms')} 
-                  className="text-[13px] text-slate-500 hover:text-emerald-600 transition-colors cursor-pointer text-left block"
-                >
+                <button onClick={() => setActiveDoc('terms')} className="text-[13px] text-slate-500 hover:text-sky-400 transition-colors cursor-pointer text-left block">
                   Gebruiksvoorwaarden
                 </button>
               </li>
               <li>
-                <button 
-                  onClick={() => setActiveDoc('refund')} 
-                  className="text-[13px] text-slate-500 hover:text-emerald-600 transition-colors cursor-pointer text-left block"
-                >
+                <button onClick={() => setActiveDoc('refund')} className="text-[13px] text-slate-500 hover:text-sky-400 transition-colors cursor-pointer text-left block">
                   Restitutiebeleid
                 </button>
               </li>
             </ul>
           </div>
 
-          {/* Column 4: Contact */}
+          {/* Contact */}
           <div>
-            <h4 className="font-bold text-slate-900 text-sm tracking-wide font-sans mb-5">Contact</h4>
-            <ul className="space-y-4 font-sans">
+            <h4 className="font-bold text-white text-sm tracking-wide mb-5">Contact</h4>
+            <ul className="space-y-4">
               <li>
-                <a 
-                  href="mailto:contact@tvluxurynl.com" 
-                  className="flex items-center gap-2.5 text-[13px] text-slate-500 hover:text-emerald-600 transition-colors"
-                >
-                  <Mail className="w-4 h-4 text-blue-500" />
-                  <span>contact@tvluxurynl.com</span>
+                <a href="mailto:contact@tvlux.org" className="flex items-center gap-2.5 text-[13px] text-slate-500 hover:text-sky-400 transition-colors">
+                  <Mail className="w-4 h-4 text-sky-500" />
+                  <span>contact@tvlux.org</span>
                 </a>
               </li>
               <li>
-                <a 
-                  href="https://wa.me/447449708976?text=Hallo%20TvLux!%20Ik%20heb%20een%20vraag%20over%20uw%20IPTV%20pakketten." 
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="flex items-center gap-2.5 text-[13px] text-slate-500 hover:text-emerald-600 transition-colors"
-                >
-                  <Phone className="w-4 h-4 text-blue-500" />
+                <a href="https://wa.me/447449708976?text=Hallo%20TvLux!%20Ik%20heb%20een%20vraag%20over%20uw%20IPTV%20pakketten." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-[13px] text-slate-500 hover:text-sky-400 transition-colors">
+                  <Phone className="w-4 h-4 text-sky-500" />
                   <span>WhatsApp Ondersteuning</span>
                 </a>
               </li>
@@ -141,59 +126,54 @@ export default function Footer({ onScrollTo }: FooterProps) {
         </div>
 
         {/* Payment logos */}
-        <div className="mt-12 pt-8 border-t border-slate-200">
-          <p className="text-xs text-slate-400 font-sans text-center mb-4">Geaccepteerde betaalmethoden</p>
+        <div className="mt-12 pt-8 border-t border-white/5">
+          <p className="text-xs text-slate-600 text-center mb-4">Geaccepteerde betaalmethoden</p>
           <div className="flex flex-wrap items-center justify-center gap-3">
             {['iDEAL', 'Bancontact', 'PayPal', 'Visa', 'Mastercard', 'Bitcoin'].map((method) => (
-              <div key={method} className="h-10 px-3 bg-white border border-slate-200 rounded-xl shadow-sm flex items-center justify-center">
-                <img
-                  src={`/images/payment_logos/${method}.png`}
-                  alt={method}
-                  className="h-6 max-w-[64px] object-contain"
-                  loading="lazy"
-                />
+              <div key={method} className="h-10 px-3 bg-slate-800 border border-white/8 rounded-xl shadow-sm flex items-center justify-center">
+                <img src={`/images/payment_logos/${method}.png`} alt={method} className="h-6 max-w-[64px] object-contain" loading="lazy" />
               </div>
             ))}
           </div>
         </div>
 
-        {/* Brand Copyright footer bar */}
-        <div className="mt-8 pt-8 border-t border-slate-200 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400 font-sans">
-          <span>&copy; {new Date().getFullYear()} TvLux. Alle rechten voorbehouden.</span>
+        {/* Copyright */}
+        <div className="mt-8 pt-8 border-t border-white/5 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-600">
+          <span>&copy; {new Date().getFullYear()} <a href="https://tvlux.org/" className="hover:text-slate-400 transition-colors">TvLux.org</a> — TvLux IPTV. Alle rechten voorbehouden.</span>
           <div className="flex gap-4">
-            <span className="text-slate-300">|</span>
-            <span className="text-slate-400">Gecertificeerde SSL-beveiliging</span>
+            <span className="text-slate-700">|</span>
+            <span>Gecertificeerde SSL-beveiliging</span>
           </div>
         </div>
 
       </div>
 
-      {/* Modern Dialog Modal overlay for Privacy and other Documents */}
+      {/* Legal modal */}
       {activeDoc && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-900/60 backdrop-blur-xs font-sans">
-          <div className="bg-white rounded-[24px] shadow-2xl max-w-lg w-full p-6 sm:p-8 relative border border-slate-100 flex flex-col max-h-[85vh]">
-            <button 
-              onClick={() => setActiveDoc(null)} 
-              className="absolute top-4 right-4 text-slate-400 hover:text-slate-650 p-1.5 rounded-full hover:bg-slate-50 transition-colors"
+        <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/70 backdrop-blur-sm">
+          <div className="bg-slate-800 border border-white/10 rounded-[24px] shadow-2xl max-w-lg w-full p-6 sm:p-8 relative flex flex-col max-h-[85vh]">
+            <button
+              onClick={() => setActiveDoc(null)}
+              className="absolute top-4 right-4 text-slate-500 hover:text-slate-300 p-1.5 rounded-full hover:bg-white/10 transition-colors"
               aria-label="Sluiten"
             >
               <X className="w-5 h-5" />
             </button>
-            
-            <h3 className="text-xl font-bold text-slate-900 mb-4 tracking-tight">
+
+            <h3 className="text-xl font-bold text-white mb-4 tracking-tight">
               {LEGAL_CONTENT[activeDoc].title}
             </h3>
-            
-            <div className="overflow-y-auto pr-2 space-y-3.5 text-slate-500 text-sm leading-relaxed text-left flex-1 py-1">
+
+            <div className="overflow-y-auto pr-2 space-y-3.5 text-slate-400 text-sm leading-relaxed text-left flex-1 py-1">
               {LEGAL_CONTENT[activeDoc].text.map((paragraph, i) => (
                 <p key={i}>{paragraph}</p>
               ))}
             </div>
-            
-            <div className="mt-6 border-t border-slate-100 pt-4 flex justify-end">
-              <button 
-                onClick={() => setActiveDoc(null)} 
-                className="px-5 py-2.5 bg-slate-900 hover:bg-slate-800 text-white font-semibold rounded-xl text-xs transition-colors cursor-pointer"
+
+            <div className="mt-6 border-t border-white/10 pt-4 flex justify-end">
+              <button
+                onClick={() => setActiveDoc(null)}
+                className="px-5 py-2.5 bg-slate-700 hover:bg-slate-600 text-white font-semibold rounded-xl text-xs transition-colors cursor-pointer"
               >
                 Sluiten
               </button>

@@ -40,7 +40,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-50 text-slate-900 font-sans antialiased selection:bg-blue-600 selection:text-white">
+    <div className="min-h-screen bg-slate-900 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
       {/* Navigation Topbar */}
       <Navbar onPricingClick={() => handleScrollToSection('pricing-section')} />
 
