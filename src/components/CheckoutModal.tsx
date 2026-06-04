@@ -39,27 +39,18 @@ export default function CheckoutModal({ isOpen, onClose, plan, initialAdultChann
       setStep(prev => prev + 1);
     } else {
       setIsSubmitting(true);
-      const webhookUrl = import.meta.env.VITE_SHEETS_URL;
-      const payload = {
+      const params = new URLSearchParams({
         email,
         phone,
-        plan: plan?.name,
+        plan: plan?.name ?? '',
         device: deviceType,
         payment: paymentMethod,
-      };
-      const finish = () => {
-        setIsSubmitting(false);
-        setOrderCompleted(true);
-      };
-      if (webhookUrl) {
-        const params = new URLSearchParams(payload as Record<string, string>);
-        fetch(`${webhookUrl}?${params.toString()}`, {
-          method: 'GET',
-          mode: 'no-cors',
-        }).finally(finish);
-      } else {
-        setTimeout(finish, 1500);
-      }
+      });
+      fetch(`/api/order?${params.toString()}`)
+        .finally(() => {
+          setIsSubmitting(false);
+          setOrderCompleted(true);
+        });
     }
   };
 
