@@ -46,11 +46,11 @@ export default function CheckoutModal({ isOpen, onClose, plan, initialAdultChann
         device: deviceType,
         payment: paymentMethod,
       });
-      fetch(`/api/order?${params.toString()}`)
-        .finally(() => {
-          setIsSubmitting(false);
-          setOrderCompleted(true);
-        });
+      // Log to sheet in background, redirect to WhatsApp immediately
+      fetch(`/api/order?${params.toString()}`).catch(() => {});
+      handleWhatsAppRedirect();
+      setIsSubmitting(false);
+      onClose();
     }
   };
 
