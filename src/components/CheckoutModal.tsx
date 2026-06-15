@@ -16,7 +16,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
 
   const handleWhatsApp = () => {
     gtag('event', 'conversion', {
-      send_to: 'AW-18217449957/jHvbCKnv9r4cEJS9oeRD',
+      send_to: 'AW-18217449957/QY2fCNGwkb8cEOXz4O5D',
       value: parseFloat(plan.price),
       currency: 'EUR',
     });
