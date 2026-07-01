@@ -28,9 +28,9 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'premium',
     name: 'PREMIUM',
-    price: '78',
+    price: '49',
     period: 'Jaar',
-    subtitle: 'Jaarabonnement + 3 Maanden Gratis',
+    subtitle: 'Jaarabonnement + 6 Maanden Gratis',
     badgeOffer: '+ Gratis IBO Pro-speler!',
     popular: true,
     monthsCount: '18 MAANDEN',
@@ -56,9 +56,9 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'basis',
     name: 'BASIS',
-    price: '69.99',
+    price: '39',
     period: 'Jaar',
-    subtitle: 'Jaarabonnement',
+    subtitle: 'Jaarabonnement + 3 Maanden Gratis',
     badgeOffer: '+ Gratis IBO Pro-speler!',
     features: [
       'BASIC SERVER',

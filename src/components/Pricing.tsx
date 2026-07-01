@@ -63,7 +63,7 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
                       MEEST POPULAIR
                     </span>
                     <span className="px-3.5 py-1 bg-violet-500 text-white font-extrabold text-[9px] uppercase tracking-wider rounded-full shadow-md shadow-violet-500/20">
-                      15 MAANDEN
+                      {plan.monthsCount}
                     </span>
                   </div>
                 )}
@@ -85,14 +85,19 @@ export default function Pricing({ onSelectPlan }: PricingProps) {
                     <h3 className="text-2xl font-bold text-white uppercase tracking-tight">
                       {displayTitle}
                     </h3>
-                    <div className="flex items-baseline gap-1 pt-1">
+                    <div className="flex items-baseline gap-1.5 pt-1 flex-wrap">
                       <span className="text-3xl sm:text-4xl font-bold tracking-tight bg-gradient-to-r from-sky-400 via-cyan-400 to-emerald-400 bg-clip-text text-transparent">
                         &euro;{plan.price}
                       </span>
                       <span className="text-xs font-bold text-slate-500">/Jaar</span>
+                      {plan.subtitle.includes('+') && (
+                        <span className="text-emerald-400 font-extrabold text-base sm:text-lg">
+                          +{plan.subtitle.split('+')[1]}
+                        </span>
+                      )}
                     </div>
                     <p className={`text-[13px] font-medium leading-snug tracking-wide ${plan.id === 'premium' ? 'text-sky-400' : 'text-slate-400'}`}>
-                      {plan.subtitle}
+                      {plan.subtitle.split('+')[0].trim()}
                     </p>
                   </div>
 
