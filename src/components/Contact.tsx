@@ -3,7 +3,7 @@ import { Mail, MessageCircle, ShieldCheck, HeartHandshake } from 'lucide-react';
 
 export default function Contact() {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/447449708976?text=Hallo%20TvLux!%20Ik%20heb%20een%20vraag%20over%20uw%20IPTV%20pakketten.', '_blank');
+    window.open('https://wa.me/447454754062?text=Hallo%20TvLux!%20Ik%20heb%20een%20vraag%20over%20uw%20IPTV%20pakketten.', '_blank');
   };
 
   return (

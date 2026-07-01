@@ -21,7 +21,7 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
       currency: 'EUR',
     });
     const text = `Hallo TvLux! Ik wil graag de ${plan.name} bestellen voor €${plan.price}/jaar.`;
-    window.open(`https://wa.me/447449708976?text=${encodeURIComponent(text)}`, '_blank');
+    window.open(`https://wa.me/447454754062?text=${encodeURIComponent(text)}`, '_blank');
     onClose();
   };
 

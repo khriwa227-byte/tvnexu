@@ -82,7 +82,7 @@ export const PRICING_PLANS: PricingPlan[] = [
   {
     id: 'goud',
     name: '🏆 GOUD',
-    price: '125',
+    price: '69',
     period: 'Jaar',
     subtitle: 'Jaarabonnement + 3 Maanden Gratis',
     badgeOffer: '+ Gratis IBO Pro-speler!',
