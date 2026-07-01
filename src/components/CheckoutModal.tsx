@@ -20,7 +20,9 @@ export default function CheckoutModal({ isOpen, onClose, plan }: CheckoutModalPr
       value: parseFloat(plan.price),
       currency: 'EUR',
     });
-    const text = `Hallo TvLux! Ik wil graag de ${plan.name} bestellen voor €${plan.price}/jaar.`;
+    const devicesMatch = plan.screensLabel?.match(/\d+/)?.[0];
+    const devicesText = devicesMatch ? ` voor ${devicesMatch} apparaten` : '';
+    const text = `Hallo TvLux! Ik wil graag de ${plan.name} bestellen voor €${plan.price}/jaar${devicesText}.`;
     window.open(`https://wa.me/447454754062?text=${encodeURIComponent(text)}`, '_blank');
     onClose();
   };
