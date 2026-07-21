@@ -8,7 +8,7 @@ interface HowItWorksProps {
 
 export default function HowItWorks({ onPricingClick }: HowItWorksProps) {
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/447454754062?text=Hallo%20TvLux!%20Ik%20wil%20graag%20een%20IPTV%20abonnement%20op%20maat%20aanvragen.', '_blank');
+    window.open('https://wa.me/447832486269?text=Hallo%20TvLux!%20Ik%20wil%20graag%20een%20IPTV%20abonnement%20op%20maat%20aanvragen.', '_blank');
   };
 
   return (
