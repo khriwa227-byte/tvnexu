@@ -1,5 +1,11 @@
 @import "tailwindcss";
 
+/* This project lives on a non-APFS volume, so macOS scatters AppleDouble
+   sidecars (._Foo.png) everywhere. Tailwind's source detection otherwise
+   scans them and pulls them into Vite's module graph — deleting the file
+   they shadow then crashes the dev server with an ENOENT. */
+@source not "../**/._*";
+
 @theme {
   /* ── "Soft Sky" palette ──────────────────────────────────────────
      Semantic tokens, derived from the logo's blue and red. Change a
