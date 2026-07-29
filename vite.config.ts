@@ -11,6 +11,20 @@ export default defineConfig(() => {
         '@': path.resolve(__dirname, '.'),
       },
     },
+    build: {
+      rollupOptions: {
+        // Multi-page: each entry ships its own crawlable HTML + <head>,
+        // so /over-ons has real meta and schema without client-side routing.
+        input: {
+          main: path.resolve(__dirname, 'index.html'),
+          about: path.resolve(__dirname, 'over-ons.html'),
+          contact: path.resolve(__dirname, 'contact.html'),
+          privacybeleid: path.resolve(__dirname, 'privacybeleid.html'),
+          gebruiksvoorwaarden: path.resolve(__dirname, 'gebruiksvoorwaarden.html'),
+          restitutiebeleid: path.resolve(__dirname, 'restitutiebeleid.html'),
+        },
+      },
+    },
     server: {
       // HMR is disabled in AI Studio via DISABLE_HMR env var.
       // Do not modifyâfile watching is disabled to prevent flickering during agent edits.

@@ -1,29 +1,44 @@
 @import "tailwindcss";
 
 @theme {
-  --animate-marquee: marquee-step 20s linear infinite;
+  /* ── "Soft Sky" palette ──────────────────────────────────────────
+     Semantic tokens, derived from the logo's blue and red. Change a
+     value here and it propagates everywhere; components never hardcode
+     a hex. Tailwind v4 generates bg-/text-/border-/ring-/shadow-
+     utilities from each --color-* below. */
+  --color-brand: #2189C9;        /* buttons, links, active states */
+  --color-brand-hover: #146DA8;  /* logo blue — hover/pressed */
+  --color-brand-deep: #10456F;   /* header, footer, headings */
+  --color-brand-light: #7CC4EC;  /* brand blue legible on brand-deep */
+  --color-brand-tint: #E3F1FA;   /* soft panels, badges */
 
-  @keyframes marquee-step {
-    0%   { transform: translateX(0%); }
-    5%   { transform: translateX(-5%); }
-    10%  { transform: translateX(-5%); }
-    15%  { transform: translateX(-10%); }
-    20%  { transform: translateX(-10%); }
-    25%  { transform: translateX(-15%); }
-    30%  { transform: translateX(-15%); }
-    35%  { transform: translateX(-20%); }
-    40%  { transform: translateX(-20%); }
-    45%  { transform: translateX(-25%); }
-    50%  { transform: translateX(-25%); }
-    55%  { transform: translateX(-30%); }
-    60%  { transform: translateX(-30%); }
-    65%  { transform: translateX(-35%); }
-    70%  { transform: translateX(-35%); }
-    75%  { transform: translateX(-40%); }
-    80%  { transform: translateX(-40%); }
-    85%  { transform: translateX(-45%); }
-    90%  { transform: translateX(-45%); }
-    95%  { transform: translateX(-50%); }
-    100% { transform: translateX(-50%); }
+  --color-accent: #FF6B5A;       /* price highlights, Live, bonus flags */
+  --color-accent-tint: #FFEDE9;  /* promo panels */
+
+  --color-page: #F5F9FC;         /* body background */
+  --color-surface: #FFFFFF;      /* cards */
+  --color-line: #E2ECF3;         /* dividers, card edges */
+
+  --color-ink: #14293D;          /* headings */
+  --color-ink-muted: #5B7183;    /* body copy */
+
+  --color-success: #3BAE7F;      /* secure / verified cues */
+  --color-success-deep: #1F7A55;  /* gradient partner for success */
+
+  --animate-marquee: marquee-scroll 40s linear infinite;
+
+  /* Continuous scroll. Content is duplicated in the markup, so travelling
+     exactly -50% lands on the start of the second copy — the loop point is
+     invisible. Any intermediate keyframes would reintroduce stutter. */
+  @keyframes marquee-scroll {
+    from { transform: translate3d(0, 0, 0); }
+    to   { transform: translate3d(-50%, 0, 0); }
+  }
+}
+
+/* Respect users who ask the OS to reduce motion. */
+@media (prefers-reduced-motion: reduce) {
+  .animate-marquee {
+    animation: none !important;
   }
 }

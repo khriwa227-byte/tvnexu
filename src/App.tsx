@@ -9,6 +9,7 @@ import Hero from './components/Hero';
 import Benefits from './components/Benefits';
 import StreamingReleases from './components/StreamingReleases';
 import SportsLeagues from './components/SportsLeagues';
+import OfficialNotice from './components/OfficialNotice';
 import Pricing from './components/Pricing';
 import HowItWorks from './components/HowItWorks';
 import DeviceCompatibility from './components/DeviceCompatibility';
@@ -40,7 +41,7 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-slate-900 text-slate-100 font-sans antialiased selection:bg-sky-500 selection:text-white">
+    <div className="min-h-screen bg-page text-ink font-sans antialiased selection:bg-brand selection:text-white">
       {/* Navigation Topbar */}
       <Navbar onPricingClick={() => handleScrollToSection('pricing-section')} />
 
@@ -62,6 +63,9 @@ export default function App() {
 
         {/* Sports icons and league lists */}
         <SportsLeagues />
+
+        {/* Official-site reassurance banner */}
+        <OfficialNotice />
 
         {/* Premium Packages in Dutch */}
         <Pricing onSelectPlan={openCheckoutWithPlan} />

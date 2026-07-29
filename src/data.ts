@@ -12,7 +12,7 @@ export const BENEFITS: Benefit[] = [
     id: 'ultrasast-connection',
     icon: 'zap',
     title: 'Ultrasnelle Verbinding',
-    description: 'In tegenstelling tot andere IPTV-providers gebruikt TvLux (tvlux.org) toegewijde Europese servers van hoge kwaliteit. Onze TV-kanalen openen in minder dan 0,5 seconde.',
+    description: 'In tegenstelling tot andere IPTV-providers gebruikt TvNexu (tv-nexu.app) toegewijde Europese servers van hoge kwaliteit. Onze TV-kanalen openen in minder dan 0,5 seconde.',
     color: 'text-green-500 bg-green-50'
   },
   {
@@ -119,7 +119,7 @@ export const STATE_STEPS = [
   {
     step: 2,
     title: 'Ontvang je account',
-    description: 'Na betaling ontvang je binnen 10 minuten je inloggegevens en installatiegids per e-mail.'
+    description: 'Na betaling ontvang je direct je inloggegevens en installatiegids per e-mail.'
   },
   {
     step: 3,
@@ -158,13 +158,13 @@ export const DEVICES: DeviceItem[] = [
 export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'faq-0',
-    question: 'Wat is TvLux (TvLuxury) en wat maakt het anders?',
-    answer: 'TvLux, ook bekend als TvLuxury of TvLuxuryNL, is een premium IPTV-aanbieder voor Nederland, België en Canada. In tegenstelling tot andere aanbieders gebruikt TvLux uitsluitend toegewijde Europese servers voor maximale stabiliteit: kanalen laden in minder dan 0,5 seconde. U krijgt 10.000+ live zenders, 249.000+ films & series en 4K/8K kwaliteit — zonder automatische incasso of verborgen kosten.'
+    question: 'Wat is TvNexu en wat maakt het anders?',
+    answer: 'TvNexu is een premium IPTV-aanbieder voor Nederland, België en Canada. In tegenstelling tot andere aanbieders gebruikt TvNexu uitsluitend toegewijde Europese servers voor maximale stabiliteit: kanalen laden in minder dan 0,5 seconde. U krijgt 10.000+ live zenders, 249.000+ films & series en 4K/8K kwaliteit — zonder automatische incasso of verborgen kosten.'
   },
   {
     id: 'faq-1',
     question: 'Is de prijs maandelijks? Word ik opnieuw gefactureerd?',
-    answer: 'Nee, absoluut niet! Bij TvLux hanteren we een eenmalig betalingssysteem zonder automatische incasso of onverwachte afschrijvingen. Je abonnement stopt automatisch na de gekozen periode, tenzij je er zelf voor kiest om te verlengen op onze officiële website. Je zit dus nergens aan vast!'
+    answer: 'Nee, absoluut niet! Bij TvNexu hanteren we een eenmalig betalingssysteem zonder automatische incasso of onverwachte afschrijvingen. Je abonnement stopt automatisch na de gekozen periode, tenzij je er zelf voor kiest om te verlengen op onze officiële website. Je zit dus nergens aan vast!'
   },
   {
     id: 'faq-2',
@@ -184,7 +184,7 @@ export const FAQ_ITEMS: FAQItem[] = [
   {
     id: 'faq-5',
     question: 'Hoe ontvang ik mijn abonnement?',
-    answer: 'Na uw betaling ontvangt u binnen 10 minuten uw inloggegevens (M3U Link, Portal URL en Xtream Codes) en een eenvoudige installatiehandleiding direct via e-mail. Indien u via WhatsApp contact heeft opgenomen, sturen we de codes direct daar ook toe.'
+    answer: 'Na uw betaling ontvangt u direct uw inloggegevens (M3U Link, Portal URL en Xtream Codes) en een eenvoudige installatiehandleiding via e-mail. Indien u via WhatsApp contact heeft opgenomen, sturen we de codes direct daar ook toe.'
   },
   {
     id: 'faq-6',

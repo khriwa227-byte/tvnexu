@@ -4,4 +4,4 @@ Allow: /
 # Crawl-delay for polite crawling
 Crawl-delay: 1
 
-Sitemap: https://tvlux.org/sitemap.xml
+Sitemap: https://tv-nexu.app/sitemap.xml

@@ -7,10 +7,10 @@ interface BenefitsProps {
 
 export default function Benefits({ onPricingClick }: BenefitsProps) {
   return (
-    <section id="benefits-section" className="relative py-12 bg-slate-900">
+    <section id="benefits-section" className="relative py-12 bg-page">
 
       {/* Dot grid */}
-      <div className="absolute inset-0 h-full w-full bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none opacity-[0.03]" />
+      <div className="absolute inset-0 h-full w-full bg-[radial-gradient(#0f172a_1px,transparent_1px)] [background-size:16px_16px] [mask-image:radial-gradient(ellipse_50%_50%_at_50%_50%,#000_70%,transparent_100%)] pointer-events-none opacity-[0.03]" />
 
       <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 z-10 space-y-12">
 
@@ -19,7 +19,7 @@ export default function Benefits({ onPricingClick }: BenefitsProps) {
           <button
             id="pills-alle-pakketten"
             onClick={onPricingClick}
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-sky-500 to-emerald-500 hover:from-sky-400 hover:to-emerald-400 text-white font-semibold text-sm shadow-md shadow-sky-500/10 hover:shadow-lg transition-all cursor-pointer"
+            className="px-6 py-3 rounded-xl bg-brand hover:bg-brand-hover text-white font-semibold text-sm shadow-md shadow-brand/10 hover:shadow-lg transition-all cursor-pointer"
           >
             Alle Pakketten
           </button>
@@ -27,7 +27,7 @@ export default function Benefits({ onPricingClick }: BenefitsProps) {
           <button
             id="pills-bekijk-abonnementen"
             onClick={onPricingClick}
-            className="px-6 py-3 rounded-xl bg-white/8 hover:bg-white/12 text-sky-400 font-semibold text-sm border border-white/10 shadow-sm transition-colors cursor-pointer"
+            className="px-6 py-3 rounded-xl bg-brand-tint hover:bg-line text-brand font-semibold text-sm border border-line shadow-sm transition-colors cursor-pointer"
           >
             Bekijk Abonnementen
           </button>
@@ -39,7 +39,7 @@ export default function Benefits({ onPricingClick }: BenefitsProps) {
             <div
               key={benefit.id}
               id={`benefit-${benefit.id}`}
-              className="bg-slate-800 rounded-3xl p-6 sm:p-8 border border-white/8 shadow-xl shadow-black/30 hover:scale-[1.01] transition-all flex flex-col justify-between"
+              className="bg-surface rounded-3xl p-6 sm:p-8 border border-line shadow-xl shadow-ink/5 hover:scale-[1.01] transition-all flex flex-col justify-between"
             >
               <div className="space-y-4">
 
@@ -59,11 +59,11 @@ export default function Benefits({ onPricingClick }: BenefitsProps) {
                   )}
                 </div>
 
-                <h3 className="text-xl font-semibold text-white leading-snug">
+                <h3 className="text-xl font-semibold text-ink leading-snug">
                   {benefit.title}
                 </h3>
 
-                <p className="text-sm text-slate-400 leading-relaxed">
+                <p className="text-sm text-ink-muted leading-relaxed">
                   {benefit.description}
                 </p>
 

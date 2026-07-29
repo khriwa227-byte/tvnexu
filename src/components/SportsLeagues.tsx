@@ -25,33 +25,42 @@ const SPORTS_LOGOS = [
 ];
 
 export default function SportsLeagues() {
-  const scrollingItems = [...SPORTS_LOGOS, ...SPORTS_LOGOS];
+  // One repeat unit: the logos plus a trailing gap. Rendering it twice makes
+  // the track exactly 2 units wide, so the -50% keyframe lands on the seam.
+  const renderRun = (copy: number) => (
+    <div
+      className="flex items-center gap-8 sm:gap-12 md:gap-16 pr-8 sm:pr-12 md:pr-16 shrink-0"
+      aria-hidden={copy > 0}
+    >
+      {SPORTS_LOGOS.map((league) => (
+        <div
+          key={`${league.id}-${copy}`}
+          className="flex items-center justify-center shrink-0 h-14 w-24 sm:h-16 sm:w-28"
+        >
+          <img
+            src={league.logoUrl}
+            alt={copy === 0 ? league.name : ''}
+            className="max-h-full max-w-full object-contain"
+            loading="lazy"
+          />
+        </div>
+      ))}
+    </div>
+  );
 
   return (
-    <section id="sports-leagues-section" className="py-8 bg-slate-900 overflow-hidden">
+    <section id="sports-leagues-section" className="py-8 bg-page overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="bg-slate-800 rounded-[32px] py-6 px-4 sm:px-8 relative overflow-hidden border border-white/8">
+        <div className="bg-surface rounded-[32px] py-6 px-4 sm:px-8 relative overflow-hidden border border-line">
 
           {/* Fade edges */}
-          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-slate-800 to-transparent z-10 pointer-events-none" />
-          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-slate-800 to-transparent z-10 pointer-events-none" />
+          <div className="absolute left-0 top-0 bottom-0 w-16 bg-gradient-to-r from-surface to-transparent z-10 pointer-events-none" />
+          <div className="absolute right-0 top-0 bottom-0 w-16 bg-gradient-to-l from-surface to-transparent z-10 pointer-events-none" />
 
           <div className="overflow-hidden select-none">
-            <div className="flex w-max animate-marquee gap-8 sm:gap-12 md:gap-16">
-              {scrollingItems.map((league, idx) => (
-                <div
-                  key={`${league.id}-${idx}`}
-                  className="flex items-center justify-center shrink-0 h-14 w-24 sm:h-16 sm:w-28"
-                  aria-hidden={idx >= SPORTS_LOGOS.length}
-                >
-                  <img
-                    src={league.logoUrl}
-                    alt={league.name}
-                    className="max-h-full max-w-full object-contain"
-                    loading="lazy"
-                  />
-                </div>
-              ))}
+            <div className="flex w-max animate-marquee">
+              {renderRun(0)}
+              {renderRun(1)}
             </div>
           </div>
 

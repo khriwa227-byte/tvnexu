@@ -19,14 +19,14 @@ export default function Testimonials() {
   const next = () => setCurrent((c) => (c === REVIEWS.length - 1 ? 0 : c + 1));
 
   return (
-    <section id="testimonials-section" className="py-16 bg-slate-900">
+    <section id="testimonials-section" className="py-16 bg-page">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
 
         <div className="text-center space-y-4 max-w-3xl mx-auto">
-          <h2 className="text-3xl md:text-4xl font-bold text-white tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold text-ink tracking-tight">
             Wat onze klanten zeggen
           </h2>
-          <p className="text-sm sm:text-base text-slate-400 max-w-2xl mx-auto">
+          <p className="text-sm sm:text-base text-ink-muted max-w-2xl mx-auto">
             We zijn trots op onze reviews en de tevredenheid van onze klanten. Ontdek waarom we de #1 IPTV provider zijn.
           </p>
         </div>
@@ -34,7 +34,7 @@ export default function Testimonials() {
         <div className="relative max-w-2xl mx-auto">
 
           {/* Image */}
-          <div className="rounded-3xl overflow-hidden shadow-2xl shadow-black/50 bg-slate-800 ring-1 ring-white/10">
+          <div className="rounded-3xl overflow-hidden shadow-xl shadow-ink/5 bg-surface ring-1 ring-line">
             <img
               key={REVIEWS[current].id}
               src={REVIEWS[current].imageUrl}
@@ -46,17 +46,17 @@ export default function Testimonials() {
           {/* Prev / Next */}
           <button
             onClick={prev}
-            className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-2 sm:-translate-x-5 w-10 h-10 sm:w-11 sm:h-11 bg-slate-800 rounded-full shadow-lg flex items-center justify-center hover:bg-slate-700 transition-colors border border-white/10"
+            className="absolute left-0 top-1/2 -translate-y-1/2 translate-x-2 sm:-translate-x-5 w-10 h-10 sm:w-11 sm:h-11 bg-surface rounded-full shadow-lg flex items-center justify-center hover:bg-brand-tint transition-colors border border-line"
             aria-label="Vorige"
           >
-            <ChevronLeft className="w-5 h-5 text-slate-200 stroke-[2.5]" />
+            <ChevronLeft className="w-5 h-5 text-ink stroke-[2.5]" />
           </button>
           <button
             onClick={next}
-            className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:translate-x-5 w-10 h-10 sm:w-11 sm:h-11 bg-slate-800 rounded-full shadow-lg flex items-center justify-center hover:bg-slate-700 transition-colors border border-white/10"
+            className="absolute right-0 top-1/2 -translate-y-1/2 -translate-x-2 sm:translate-x-5 w-10 h-10 sm:w-11 sm:h-11 bg-surface rounded-full shadow-lg flex items-center justify-center hover:bg-brand-tint transition-colors border border-line"
             aria-label="Volgende"
           >
-            <ChevronRight className="w-5 h-5 text-slate-200 stroke-[2.5]" />
+            <ChevronRight className="w-5 h-5 text-ink stroke-[2.5]" />
           </button>
 
           {/* Dots */}
@@ -67,8 +67,8 @@ export default function Testimonials() {
                 onClick={() => setCurrent(i)}
                 className={`rounded-full transition-all ${
                   i === current
-                    ? 'w-6 h-2.5 bg-sky-400'
-                    : 'w-2.5 h-2.5 bg-slate-600 hover:bg-slate-500'
+                    ? 'w-6 h-2.5 bg-brand'
+                    : 'w-2.5 h-2.5 bg-ink-muted/40 hover:bg-brand'
                 }`}
                 aria-label={`Review ${i + 1}`}
               />
