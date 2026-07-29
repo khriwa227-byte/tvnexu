@@ -1,5 +1,6 @@
 import React from 'react';
 import { Zap, ShoppingCart, Star } from 'lucide-react';
+import { PRICING_PLANS } from '../data';
 
 interface HeroProps {
   onPricingClick: () => void;
@@ -7,6 +8,10 @@ interface HeroProps {
 }
 
 export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
+  // Read the entry plan from the pricing data rather than hardcoding it, so
+  // the button's price can never disagree with the plan it opens.
+  const entryPlan = PRICING_PLANS.find((p) => p.id === 'basis') ?? PRICING_PLANS[0];
+
   return (
     <section id="hero-section" className="relative py-12 lg:py-20 overflow-hidden bg-page">
 
@@ -74,11 +79,11 @@ export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
                 </button>
                 <button
                   id="action-order-basis"
-                  onClick={() => onOrderClick('basis')}
+                  onClick={() => onOrderClick(entryPlan.id)}
                   className="rounded-full px-6 py-4 bg-brand-tint hover:bg-line border border-brand/20 transition-colors font-semibold text-brand-hover text-sm sm:text-base flex items-center justify-center gap-2 transform hover:scale-102 active:scale-98 cursor-pointer"
                 >
                   <ShoppingCart className="w-4 h-4" />
-                  Bestellen - €69.99/Jaar
+                  Bestellen - €{entryPlan.price}/Jaar
                 </button>
               </div>
 
