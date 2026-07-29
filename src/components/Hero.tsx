@@ -52,7 +52,7 @@ export default function Hero({ onPricingClick, onOrderClick }: HeroProps) {
               {/* Headlines */}
               <div className="space-y-4">
                 <h1 className="text-2xl sm:text-4xl md:text-5xl font-bold leading-[1.12] text-ink tracking-tight">
-                  <span className="text-brand">IPTV Nederland</span> — het beste IPTV abonnement voor Nederland en België 🇳🇱 🇧🇪
+                  <span className="text-brand">TvNexu</span> — het beste IPTV abonnement voor Nederland en België 🇳🇱 🇧🇪
                 </h1>
                 <p id="hero-gradient-text" className="text-xl sm:text-3xl md:text-4xl font-bold bg-gradient-to-r from-brand via-brand to-brand-deep bg-clip-text text-transparent leading-snug">
                   Kwaliteit en Extra's voor Jouw Entertainment!
