@@ -1,11 +1,50 @@
 import tailwindcss from '@tailwindcss/vite';
 import react from '@vitejs/plugin-react';
 import path from 'path';
-import {defineConfig} from 'vite';
+import {defineConfig, Plugin} from 'vite';
+import {PRICING_PLANS} from './src/data';
+
+const SITE_URL = 'https://tv-nexu.app';
+
+/**
+ * Builds the schema.org Offer list from the same PRICING_PLANS the page
+ * renders. Google flags an Offer price that disagrees with the visible page,
+ * and keeping a second copy of the prices in index.html is exactly how they
+ * drifted apart before — so the markup is generated, never hand-maintained.
+ */
+function pricingOffersPlugin(): Plugin {
+  return {
+    name: 'inject-pricing-offers',
+    transformIndexHtml(html) {
+      if (!html.includes('"__PRICING_OFFERS__"')) return html;
+
+      // Plan names carry display decoration (e.g. '🏆 GOUD'); structured data
+      // wants the plain product name.
+      const cleanName = (name: string) =>
+        name.replace(/[^\p{L}\p{N}\s+/-]/gu, '').replace(/\s+/g, ' ').trim();
+
+      const offers = PRICING_PLANS.map((plan) => ({
+        '@type': 'Offer',
+        name: `TvNexu ${cleanName(plan.name)}`,
+        price: plan.price,
+        priceCurrency: 'EUR',
+        availability: 'https://schema.org/InStock',
+        url: `${SITE_URL}/#pricing-section`,
+      }));
+
+      // Indented to sit correctly inside the surrounding JSON-LD block.
+      const json = JSON.stringify(offers, null, 2)
+        .split('\n')
+        .join('\n          ');
+
+      return html.replace('"__PRICING_OFFERS__"', json);
+    },
+  };
+}
 
 export default defineConfig(() => {
   return {
-    plugins: [react(), tailwindcss()],
+    plugins: [react(), tailwindcss(), pricingOffersPlugin()],
     resolve: {
       alias: {
         '@': path.resolve(__dirname, '.'),
