@@ -95,7 +95,7 @@ export default function Footer({ onScrollTo }: FooterProps) {
                 </a>
               </li>
               <li>
-                <a href="https://wa.me/447832486269?text=Hallo%20TvNexu!%20Ik%20heb%20een%20vraag%20over%20uw%20IPTV%20pakketten." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-[13px] text-ink-muted hover:text-brand transition-colors">
+                <a href="https://wa.me/447449708976?text=Hallo%20TvNexu!%20Ik%20heb%20een%20vraag%20over%20uw%20IPTV%20pakketten." target="_blank" rel="noopener noreferrer" className="flex items-center gap-2.5 text-[13px] text-ink-muted hover:text-brand transition-colors">
                   <Phone className="w-4 h-4 text-brand" />
                   <span>WhatsApp Ondersteuning</span>
                 </a>

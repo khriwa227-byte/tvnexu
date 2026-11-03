@@ -23,7 +23,7 @@ export default function Navbar({ onPricingClick }: NavbarProps) {
   const contactHref = onHomepage ? '#contact-section' : '/#contact-section';
 
   const handleWhatsAppClick = () => {
-    window.open('https://wa.me/447832486269?text=Hallo%20TvNexu!%20Ik%20heb%20een%20vraag%20over%20uw%20IPTV%20pakketten.', '_blank');
+    window.open('https://wa.me/447449708976?text=Hallo%20TvNexu!%20Ik%20heb%20een%20vraag%20over%20uw%20IPTV%20pakketten.', '_blank');
   };
 
   return (
@@ -82,7 +82,7 @@ export default function Navbar({ onPricingClick }: NavbarProps) {
                 <div className="p-1 text-[#25D366]">
                   <Phone className="w-3.5 h-3.5 stroke-[3]" />
                 </div>
-                <span className="font-mono hidden md:inline">+44 7832 486269</span>
+                <span className="font-mono hidden md:inline">+44 7449 708976</span>
               </button>
 
               {/* Pricing CTA */}
